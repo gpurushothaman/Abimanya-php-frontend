@@ -1307,6 +1307,52 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     pointer-events: none;
 }
 
+
+
+/* Fix Login Email Input Double Border */
+
+.login-input-group {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding: 0 15px;
+    border: 1px solid #79c900;
+    border-radius: 12px;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Remove inner input border and focus ring */
+.login-input-group input.form-control,
+.login-input-group input.form-control:focus {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* Keep email icon aligned */
+.login-input-group > i {
+    flex-shrink: 0;
+    margin-right: 12px;
+    line-height: 1;
+}
+
+/* Focus effect only on outer border */
+.login-input-group:focus-within {
+    border-color: #59a500;
+    box-shadow: 0 0 0 3px rgba(121, 201, 0, 0.12);
+}
+
+
 /* Mobile Responsive */
 
 @media (max-width: 576px) {
@@ -1341,10 +1387,302 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 
 
+                                       /* =========================================
+                                         THIYAGU ----> ABIMANYA HOME PAGE - HERO SECTION
+                                          ========================================= */
+
+
+.home-page {
+    min-height: 100vh;
+    background: #ffffff;
+    font-family: inherit;
+    color: #17364b;
+}
+
+/* Hero Layout */
+
+.home-hero {
+    min-height: 78vh;
+    display: grid;
+    grid-template-columns: 44% 56%;
+    overflow: hidden;
+}
+
+/* Left Content */
+
+.home-hero-content {
+    padding: 55px 35px 35px max(35px, calc((100vw - 1300px) / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-eyebrow {
+    color: #62a900;
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.home-hero-content h1 {
+    font-size: clamp(32px, 3vw, 48px);
+    line-height: 1.08;
+    font-weight: 800;
+    color: #17364b;
+    margin-bottom: 18px;
+}
+
+.home-hero-content h1 span {
+    display: block;
+    color: #62a900;
+}
+
+.home-description {
+    color: #526b7e;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+/* Feature Items */
+
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 30px;
+}
+
+.home-feature {
+    padding: 8px 10px;
+    border-right: 1px solid #e3ebdf;
+}
+
+.home-feature:first-child {
+    padding-left: 0;
+}
+
+.home-feature:last-child {
+    border-right: none;
+}
+
+.home-feature i {
+    display: block;
+    font-size: 23px;
+    color: #62a900;
+    margin-bottom: 10px;
+}
+
+.home-feature h6 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.home-feature p {
+    color: #718096;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Buttons */
+
+.home-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.home-signin-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-width: 155px;
+    padding: 13px 24px;
+    border-radius: 30px;
+    background: #62a900;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.home-signin-button:hover {
+    background: #528f00;
+    color: #ffffff;
+}
+
+.home-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #528f00;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.home-video-link span {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #dcebcf;
+    font-size: 18px;
+}
+
+/* Right Door Image */
+
+.home-hero-image {
+    position: relative;
+    min-height: 50px;
+    overflow: hidden;
+    background: #e9e4dc;
+}
+
+.home-hero-image > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-image-caption {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    z-index: 1;
+    text-align: center;
+    pointer-events: none;
+}
+
+.home-image-caption h2 {
+    color: #528f00;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Bottom Benefits */
+
+.home-benefits {
+    min-height: 100px;
+    padding: 20px max(30px, calc((100vw - 1300px) / 2));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 60px;
+    background: #f3f8ef;
+}
+
+.home-benefit {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 20px;
+    border-right: 1px solid #dce8d3;
+}
+
+.home-benefit:first-child {
+    padding-left: 0;
+}
+
+.home-benefit:last-child {
+    border-right: none;
+}
+
+.home-benefit > i {
+    color: #62a900;
+    font-size: 28px;
+}
+
+.home-benefit h6 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.home-benefit p {
+    color: #718096;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+    .home-hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-hero-content {
+        padding: 35px 20px;
+    }
+
+    .home-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-feature {
+        margin-bottom: 10px;
+    }
+
+    .home-hero-image {
+        min-height: 500px;
+    }
+
+    .home-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .home-hero-content {
+        padding: 40px 22px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .home-hero-image {
+        min-height: 380px;
+    }
+
+    .home-benefits {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .home-benefit {
+        border-right: none;
+        border-bottom: 1px solid #dce8d3;
+        padding: 12px 0;
+    }
+
+    .home-benefit:last-child {
+        border-bottom: none;
+    }
+}
 
 
 
-                                                   /* =========================================
+                                                  /* =========================================
                                                         THIYAGUU - ABIMANYA REGISTER PAGE
 
                                                                   Register page 
@@ -1500,7 +1838,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 .register-signin {
     text-align: center;
     color: #718096;
-    font-size: 12px;
+    font-size: 15px;
     margin: 10px 0 0;
 }
 
@@ -1519,7 +1857,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 .register-image-panel {
     width: 48%;
-    min-height: 90px;
+    min-height: 100%;
     position: relative;
     overflow: hidden;
     background-color: #e9e4dc;
@@ -1593,366 +1931,15 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
         font-size: 24px;
     }
 }
-                              
 
+                                                      /* =========================================
+                                                        PURUSOTH BRO - ABIMANYA REGISTER PAGE
 
+                                                                  Register page 
+                                                      ========================================= */
 
 
-
-
-
-/* =========================================
-  THIYAGU ----> ABIMANYA HOME PAGE - HERO SECTION
-  ========================================= */
-
-
-.home-page {
-    min-height: 100vh;
-    background: #ffffff;
-    font-family: inherit;
-    color: #17364b;
-}
-
-/* Hero Layout */
-
-.home-hero {
-    min-height: 78vh;
-    display: grid;
-    grid-template-columns: 44% 56%;
-    overflow: hidden;
-}
-
-/* Left Content */
-
-.home-hero-content {
-    padding: 55px 35px 35px max(35px, calc((100vw - 1300px) / 2));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.home-eyebrow {
-    color: #62a900;
-    font-size: 15px;
-    font-weight: 900;
-    margin-bottom: 12px;
-}
-
-.home-hero-content h1 {
-    font-size: clamp(32px, 3vw, 48px);
-    line-height: 1.08;
-    font-weight: 800;
-    color: #17364b;
-    margin-bottom: 18px;
-}
-
-.home-hero-content h1 span {
-    display: block;
-    color: #62a900;
-}
-
-.home-description {
-    color: #526b7e;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 480px;
-    margin-bottom: 30px;
-}
-
-/* Feature Items */
-
-.home-features {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-bottom: 30px;
-}
-
-.home-feature {
-    padding: 8px 10px;
-    border-right: 1px solid #e3ebdf;
-}
-
-.home-feature:first-child {
-    padding-left: 0;
-}
-
-.home-feature:last-child {
-    border-right: none;
-}
-
-.home-feature i {
-    display: block;
-    font-size: 23px;
-    color: #62a900;
-    margin-bottom: 10px;
-}
-
-.home-feature h6 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.home-feature p {
-    color: #718096;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-/* Buttons */
-
-.home-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.home-signin-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    min-width: 155px;
-    padding: 13px 24px;
-    border-radius: 30px;
-    background: #62a900;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background 0.2s ease;
-}
-
-.home-signin-button:hover {
-    background: #528f00;
-    color: #ffffff;
-}
-
-.home-video-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: #528f00;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.home-video-link span {
-    display: grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #dcebcf;
-    font-size: 18px;
-}
-
-/* Right Door Image */
-
-.home-hero-image {
-    position: relative;
-    min-height: 650px;
-    overflow: hidden;
-    background: #e9e4dc;
-}
-
-.home-hero-image > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.home-image-caption {
-    position: absolute;
-    top: 12%;
-    right: 10%;
-    z-index: 1;
-    text-align: center;
-    pointer-events: none;
-}
-
-.home-image-caption h2 {
-    color: #528f00;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-/* Bottom Benefits */
-
-.home-benefits {
-    min-height: 100px;
-    padding: 20px max(30px, calc((100vw - 1300px) / 2));
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: 60px;
-    background: #f3f8ef;
-}
-
-.home-benefit {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 5px 20px;
-    border-right: 1px solid #dce8d3;
-}
-
-.home-benefit:first-child {
-    padding-left: 0;
-}
-
-.home-benefit:last-child {
-    border-right: none;
-}
-
-.home-benefit > i {
-    color: #62a900;
-    font-size: 28px;
-}
-
-.home-benefit h6 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.home-benefit p {
-    color: #718096;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-/* Tablet */
-
-@media (max-width: 992px) {
-    .home-hero {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .home-hero-content {
-        padding: 35px 20px;
-    }
-
-    .home-features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .home-feature {
-        margin-bottom: 10px;
-    }
-
-    .home-hero-image {
-        min-height: 500px;
-    }
-
-    .home-benefits {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 767px) {
-    .home-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .home-hero-content {
-        padding: 40px 22px;
-    }
-
-    .home-hero-content h1 {
-        font-size: 36px;
-    }
-
-    .home-hero-image {
-        min-height: 380px;
-    }
-
-    .home-benefits {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .home-benefit {
-        border-right: none;
-        border-bottom: 1px solid #dce8d3;
-        padding: 12px 0;
-    }
-
-    .home-benefit:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Registration */
-
-.registration-container {
-  max-width: 850px;
-  margin: 42px auto;
-}
-
-.registration-card {
-  background: #ffffff;
-  border: 1px solid #e5e9f0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 35px rgba(27, 46, 75, 0.07);
-}
-
-.card-heading {
-  padding: 32px 32px 24px;
-  text-align: center;
-  border-bottom: 1px solid #edf0f5;
-}
-
-.register-icon {
-  width: 58px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-  border-radius: 16px;
-  background: #eaf1ff;
-  color: var(--primary);
-  font-size: 27px;
-}
-
-.card-heading h1 {
-  font-size: 27px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.card-heading p {
-  color: #718096;
-  margin-bottom: 0;
-}
-
-.card-content {
-  padding: 32px;
-}
-
-.section-heading {
-  color: var(--primary);
-  font-size: 16px;
-  font-weight: 700;
-  margin: 8px 0 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #edf0f5;
-}
-
-.form-label {
+ .form-label {
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 8px;
@@ -2010,7 +1997,7 @@ textarea.form-control {
 }
 
 .btn-register {
-  min-height: 49px;
+  min-height: 5px;
   color: #ffffff;
   background: var(--primary);
   border: 1px solid var(--primary);
@@ -2024,13 +2011,19 @@ textarea.form-control {
 }
 
 .login-link {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.login-link:hover {
-  text-decoration: underline;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-width: 155px;
+    padding: 13px 24px;
+    border-radius: 30px;
+    background: #62a900;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s ease;
 }
 
 .page-footer {
@@ -2038,23 +2031,548 @@ textarea.form-control {
   text-align: center;
   font-size: 12px;
   padding: 22px 0;
+} 
+
+.register-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 12px 10px;
+    align-items: flex-start;
 }
 
-@media (max-width: 576px) {
-  .registration-container {
-      margin: 20px auto;
-      padding: 0 12px;
-  }
-
-  .card-heading {
-      padding: 25px 18px 20px;
-  }
-
-  .card-content {
-      padding: 22px 18px;
-  }
-
-  .card-heading h1 {
-      font-size: 23px;
-  }
+/* Main card */
+.register-card {
+    width: 100%;
+    max-width: 1376px;
+    margin: 8px auto;
+    align-items: stretch;
 }
+
+/* Form panel */
+.register-form-panel {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 18px 26px;
+}
+
+/* Logo and heading */
+.register-logo {
+    margin-bottom: 4px;
+}
+
+.register-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.register-heading {
+    margin-bottom: 6px;
+}
+
+.register-heading h2 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.register-heading p {
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* Section headings */
+.register-form-panel .section-heading {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 6px 0 8px !important;
+    padding-bottom: 5px;
+}
+
+/* Address and Security section spacing */
+.register-form-panel .section-heading.mt-4 {
+    margin-top: 10px !important;
+}
+
+/* Form rows and fields */
+.register-form-panel .row {
+    --bs-gutter-y: 8px;
+}
+
+.register-form-panel .row > * {
+    min-width: 0;
+}
+
+.register-form-panel .form-label {
+    font-size: 11px;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.register-form-panel .form-control {
+    min-height: 30px;
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Address field */
+.register-form-panel textarea.form-control {
+    height: 38px;
+    min-height: 38px;
+    resize: vertical;
+}
+
+/* Hints and validation messages */
+.register-form-panel .password-hint,
+.register-form-panel .field-error {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-top: 3px;
+}
+
+/* Create Account button */
+.register-form-panel .d-grid.mt-4 {
+    margin-top: 10px !important;
+}
+
+.register-form-panel .btn-register {
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* Sign In area */
+.register-form-panel .text-center.mt-4 {
+    margin-top: 8px !important;
+}
+
+.register-form-panel .login-link {
+    min-width: 105px;
+    padding: 8px 16px;
+    font-size: 12px;
+}
+/* Sign In Button - Hover Color */
+.register-form-panel .login-link:hover {
+    background-color: #4f8f00;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Already have an account? - Link Color */
+.register-form-panel .text-center.mt-4 > a:first-child {
+    color: #62a900;
+    text-decoration: none;
+}
+
+/* Already have an account? - Hover */
+.register-form-panel .text-center.mt-4 > a:first-child:hover {
+    color: #3d7000;
+    text-decoration: underline;
+}
+/* Sign In Button - Remove Border and Blue Blur */
+.login-link {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.login-link:hover {
+    background-color: #528f00;
+    color: #ffffff;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.login-link:focus,
+.login-link:active,
+.login-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Right-side image */
+.register-image-panel {
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-image-panel > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reduce phone country code size */
+.iti__selected-dial-code {
+    font-size: 12px !important;
+}
+
+/* Reduce country flag and dropdown spacing */
+.iti__selected-country {
+    padding: 0 4px !important;
+}
+
+/* Phone number input text */
+.iti input[type="tel"] {
+    font-size: 12px !important;
+    padding-left: 5px !important;
+}
+
+                                          /* =========================================
+                                      ABIMANYA REGISTER - THIYAGUUU -override error side effcts
+                                            ========================================= */
+
+/* Register page */
+.register-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 10px !important;
+    align-items: center;
+}
+
+/* Main card */
+.register-card {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+}
+
+/* Form panel */
+.register-form-panel {
+    padding: 18px 24px !important;
+    box-sizing: border-box;
+}
+
+/* Logo and heading */
+.register-logo {
+    margin-bottom: 3px !important;
+}
+
+.register-logo img {
+    max-height: 32px;
+}
+
+.register-heading {
+    margin-bottom: 6px !important;
+}
+
+.register-heading h2 {
+    font-size: 17px !important;
+    margin-bottom: 1px !important;
+}
+
+.register-heading p {
+    font-size: 11px !important;
+}
+
+/* Section headings */
+.register-form-panel .section-heading {
+    font-size: 13px !important;
+    margin-top: 9px !important;
+    margin-bottom: 7px !important;
+    padding-bottom: 5px !important;
+}
+
+/* Labels and input fields */
+.register-form-panel .form-label {
+    font-size: 11px !important;
+    margin-bottom: 2px !important;
+}
+
+.register-form-panel .form-control {
+    min-height: 30px !important;
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+}
+
+.register-form-panel textarea.form-control {
+    min-height: 38px !important;
+    height: 38px !important;
+}
+
+/* Compact form rows */
+.register-form-panel .mb-3 {
+    margin-bottom: 7px !important;
+}
+
+.register-form-panel .row {
+    margin-bottom: 0 !important;
+}
+
+/* Validation errors */
+.register-form-panel .field-error {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    margin-top: 2px !important;
+}
+
+.register-form-panel .password-hint {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    margin-top: 3px !important;
+}
+
+/* Reduce space before Sign In */
+.register-form-panel #registerForm .text-center.mt-4 {
+    margin-top: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+/* Keep button compact */
+.register-form-panel .login-link {
+    min-height: 34px;
+    padding: 8px 22px !important;
+}
+
+/* Fix phone number flag and placeholder overlap */
+
+.register-form-panel .iti {
+    display: block !important;
+    width: 100% !important;
+}
+
+.register-form-panel .iti input[type="tel"] {
+    width: 100% !important;
+    min-height: 32px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-right: 8px !important;
+    padding-left: 100px !important;
+    box-sizing: border-box !important;
+}
+
+.register-form-panel .iti__flag-container {
+    left: 0 !important;
+}
+
+.register-form-panel .iti__selected-country {
+    padding: 0 8px !important;
+}
+
+.register-form-panel .iti__selected-dial-code {
+    margin-left: 4px !important;
+}
+
+
+/* Desktop: fit the card within the visible screen */
+@media (min-width: 993px) {
+    .register-page {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .register-card {
+        max-height: calc(100vh - 40px);
+    }
+
+    .register-form-panel {
+        overflow-y: auto;
+    }
+
+    .register-image-panel {
+        min-height: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .register-page {
+        padding: 12px !important;
+        align-items: flex-start;
+    }
+
+    .register-card {
+        max-height: none;
+        flex-direction: column;
+    }
+
+    .register-form-panel {
+        width: 100%;
+        overflow: visible;
+        padding: 20px 16px !important;
+    }
+
+    .register-image-panel {
+        width: 100%;
+        min-height: 260px;
+    }
+}
+
+
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1100px) {
+    .register-form-panel {
+        padding: 16px 18px;
+    }
+
+    .register-form-panel .section-heading {
+        font-size: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .register-page {
+        padding: 12px;
+    }
+
+    .register-card {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .register-form-panel {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .register-image-panel {
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
+
+
+
+                                                 /* --------------------------
+                                                   THIYAGU -ABIMANYA Profile Card
+                                                  ---------------------------- */
+
+
+                                                  
+/* =================================
+   ABIMANYA DOORS - USER PROFILE CARD
+================================= */
+
+.user-profile {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-family: inherit;
+    z-index: 1000;
+}
+
+/* Small profile icon */
+
+.profile-trigger {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #8054c7;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.profile-trigger:hover {
+    background: #6940ad;
+}
+
+/* Dropdown card */
+
+.profile-card {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease,
+                transform 0.2s ease,
+                visibility 0.2s ease;
+}
+
+.profile-card.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* User information */
+
+.profile-card-header {
+    background: #f7f5fa;
+    padding: 24px 15px;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #8054c7;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-username {
+    color: #202124;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    overflow-wrap: anywhere;
+}
+
+.profile-email {
+    color: #5f6368;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Sign out */
+
+.profile-signout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 22px;
+    color: #333333;
+    background: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.profile-signout i {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.profile-signout:hover {
+    background: #f1f3f4;
+    color: #202124;
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+    .profile-card {
+        width: min(300px, calc(100vw - 24px));
+        right: -5px;
+    }
+}
+

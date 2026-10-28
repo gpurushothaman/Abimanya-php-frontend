@@ -1,6 +1,6 @@
 
 RewriteEngine On
-RewriteBase /abimanyaphp/
+RewriteBase /Abimanya-php-frontend/
 
 # Allow existing files
 RewriteCond %{REQUEST_FILENAME} -f

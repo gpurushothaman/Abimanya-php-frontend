@@ -28,18 +28,27 @@
 
             <!-- Left: Company Logo -->
             <a href="<?= url('/') ?>" class="abimanya-logo-link">
-                <!-- <img
+                <img
                 src="<?= url('assets/logo/company-logo.PNG') ?>"
                 alt="Abimanya Doors"
                 class="abimanya-header-logo"
-            > -->
+            >
             </a>
 
             <!-- Right: Header Icons -->
             <nav class="abimanya-header-nav">
 
                 <?php
+                $username = $email = $initial = "";
+                if (!empty($_SESSION['user'])) {
+                    $username = $_SESSION['user']['name'] ?? '';
+                    $email = $_SESSION['user']['email'] ?? '';
 
+                    // First letter of the email address
+                    $initial = !empty($email)
+                        ? strtoupper(substr(trim($email), 0, 1))
+                        : '?';
+                }
                 if (empty($_SESSION['user'])) : ?>
 
                     <a href="<?= url('/register') ?>" class="abimanya-header-link">
@@ -48,7 +57,6 @@
                     </a>
 
                 <?php endif; ?>
-
 
                 <?php
 
@@ -67,13 +75,86 @@
                     </a>
 
                 <?php endif; ?>
-                <a href="<?= url('/profile') ?>" class="abimanya-header-link">
-                    <i class="bi bi-person-circle"></i>
-                    <span>Profile</span>
-                </a>
+
+
+                <?php
+
+                if (!empty($_SESSION['user'])) : ?>
+
+                    <div class="user-profile">
+                        <button
+                            type="button"
+                            class="profile-trigger"
+                            id="profileTrigger"
+                            aria-label="Open profile"
+                            aria-expanded="false">
+                            <?= htmlspecialchars($initial, ENT_QUOTES, 'UTF-8') ?>
+                        </button>
+
+                        <div class="profile-card" id="profileCard">
+
+                            <div class="profile-card-header">
+                                <div class="profile-avatar">
+                                    <?= htmlspecialchars($initial, ENT_QUOTES, 'UTF-8') ?>
+                                </div>
+
+                                <div class="profile-username">
+                                    <?= htmlspecialchars($username, ENT_QUOTES, 'UTF-8') ?>
+                                </div>
+
+                                <div class="profile-email">
+                                    <?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8') ?>
+                                </div>
+                            </div>
+
+                            <a
+                                href="<?= url('public/logout.php') ?>"
+                                class="profile-signout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign out</span>
+                            </a>
+
+                        </div>
+                    </div>
+                <?php else : ?>
+
+                    <div class="user-profile">
+                        <button
+                            type="button"
+                            class="profile-trigger"                         
+                            aria-label="Open profile"
+                            aria-expanded="false">
+                            <?= htmlspecialchars("P", ENT_QUOTES, 'UTF-8') ?>
+                        </button>
+                    </div>
+
+                <?php endif; ?>
 
             </nav>
         </div>
     </header>
+
+    <script>
+        (() => {
+            const trigger = document.getElementById('profileTrigger');
+            const card = document.getElementById('profileCard');
+
+            if (!trigger || !card) return;
+
+            trigger.addEventListener('click', (event) => {
+                event.stopPropagation();
+
+                const isOpen = card.classList.toggle('show');
+                trigger.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.user-profile')) {
+                    card.classList.remove('show');
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
 
     <main>
