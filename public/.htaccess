@@ -1,0 +1,10 @@
+
+RewriteEngine On
+RewriteBase /abimanyaphp/
+
+# Allow existing files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Forward requests to the router
+RewriteRule ^ index.php [QSA,L]

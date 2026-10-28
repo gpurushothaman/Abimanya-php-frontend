@@ -1,0 +1,4 @@
+npm init -y
+npm install --save-dev javascript-obfuscator
+
+npx javascript-obfuscator main/main.js --output main/main-obfuscated.js --compact true --string-array true --string-array-encoding base64

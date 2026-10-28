@@ -1,0 +1,109 @@
+{
+  "estimateId": "EST-2026-001",
+  "meta": {
+    "date": "07-May-2026",
+    "validity": "30 Days",
+    "executive": "Arun Kumar",
+    "customer": {
+      "name": "Mr. Ramesh Kumar",
+      "project": "Lake View Apartments",
+      "contact": "9999999999",
+      "billing": "Chennai, Tamil Nadu - 600001",
+      "shipping": "Chennai, Tamil Nadu - 600001"
+    }
+  },
+  "doorConfig": {
+    "left": [
+      { "key": "Door Location", "value": "Bedroom" },
+      { "key": "Door Design", "value": "Laminate Elite" },
+      { "key": "Door Model", "value": "LE2" },
+      { "key": "Door Shade", "value": "American Walnut" },
+      { "key": "Door Orientation", "value": "LHS" },
+      { "key": "Door Size (HxWxT)", "value": "1890 x 990 x 35 mm" },
+      { "key": "Frame Size (HxW)", "value": "2000 x 1000 mm" },
+      { "key": "Frame Included", "value": "Yes" },
+      { "key": "Threshold", "value": "Yes" },
+      { "key": "Frame Type", "value": "Solid Wood African Teak" }
+    ],
+    "right": [
+      { "key": "Frame Section (WxT)", "value": "90 mm x 60 mm" },
+      { "key": "Architrave - Front", "value": "S-60" },
+      { "key": "Architrave - Back", "value": "S-60" },
+      { "key": "Full Wall Frame", "value": "Yes" },
+      { "key": "Wall Thickness", "value": "140 mm" },
+      { "key": "Jamb Included", "value": "Yes" },
+      { "key": "Jamb Selection", "value": "J100" },
+      { "key": "Jamb Position", "value": "Front" },
+      { "key": "Quantity", "value": "1" },
+      { "key": "", "value": "" }
+    ]
+  },
+  "breakdown": [
+    {
+      "id": 1,
+      "desc": "Door Shutter",
+      "qty": 18.35,
+      "unit": "SFT",
+      "rate": 371.0,
+      "amount": 6809
+    },
+    {
+      "id": 2,
+      "desc": "Wooden Frame",
+      "qty": 15.65,
+      "unit": "RFT",
+      "rate": 371.0,
+      "amount": 7306
+    },
+    {
+      "id": 3,
+      "desc": "Architrave Front",
+      "qty": 16.65,
+      "unit": "RFT",
+      "rate": 55.0,
+      "amount": 933
+    },
+    {
+      "id": 4,
+      "desc": "Architrave Back",
+      "qty": 16.65,
+      "unit": "RFT",
+      "rate": 77.0,
+      "amount": 1287
+    },
+    {
+      "id": 5,
+      "desc": "Jamb Work",
+      "qty": 20.25,
+      "unit": "RFT",
+      "rate": 125.87,
+      "amount": 2550
+    },
+    {
+      "id": 6,
+      "desc": "Hardware & Accessories",
+      "qty": 1,
+      "unit": "Lot",
+      "rate": 0.0,
+      "amount": 0
+    },
+    {
+      "id": 7,
+      "desc": "Installation Charges",
+      "qty": 1,
+      "unit": "Lot",
+      "rate": 0.0,
+      "amount": 0
+    }
+  ],
+  "commercial": {
+    "subtotalA": 18882,
+    "transport": 1500,
+    "marginPerc": 10,
+    "marginAmt": 1388,
+    "subtotalB": 22270,
+    "gstPerc": 18,
+    "gstAmt": 4027,
+    "grandTotal": 26297
+  }
+}

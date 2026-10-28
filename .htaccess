@@ -1,0 +1,14 @@
+
+RewriteEngine On
+RewriteBase /abimanyaphp/
+
+# Redirect direct /public URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+abimanyaphp/public(?:/([^\s?]*))?[\s?] [NC]
+RewriteRule ^public/?(.*)$ /abimanyaphp/$1 [R=302,L,NE]
+
+# Serve existing files inside public (CSS, JS, images)
+RewriteCond %{DOCUMENT_ROOT}/abimanyaphp/public/$1 -f
+RewriteRule ^(.+)$ public/$1 [L]
+
+# Send all page requests through the central router
+RewriteRule ^ public/index.php [QSA,L]
