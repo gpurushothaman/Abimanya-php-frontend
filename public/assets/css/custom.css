@@ -1020,7 +1020,7 @@ body {
 .abimanya-header {
     width: 100%;
     height: 65px;
-    background-color: rgb(237, 238, 237);
+    background-color: #fbfcfb;
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -2466,7 +2466,7 @@ textarea.form-control {
     height: 42px;
     border: none;
     border-radius: 50%;
-    background: #8054c7;
+    background:#62a900;
     color: #ffffff;
     font-size: 21px;
     font-weight: 600;
@@ -2478,7 +2478,7 @@ textarea.form-control {
 }
 
 .profile-trigger:hover {
-    background: #6940ad;
+    background: #528f00;
 }
 
 /* Dropdown card */
@@ -2487,7 +2487,7 @@ textarea.form-control {
     position: absolute;
     top: calc(100% + 12px);
     right: 0;
-    width: 300px;
+    width: 220px;
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 16px;
@@ -2521,7 +2521,7 @@ textarea.form-control {
     height: 68px;
     margin: 0 auto 12px;
     border-radius: 50%;
-    background: #8054c7;
+    background: #62a900;
     color: #ffffff;
     font-size: 32px;
     font-weight: 500;
@@ -2548,6 +2548,7 @@ textarea.form-control {
 
 .profile-signout {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
     padding: 17px 22px;
@@ -2575,4 +2576,307 @@ textarea.form-control {
         right: -5px;
     }
 }
+
+
+
+
+                                              /* =================================
+                                                   ABHIMANYA DOORS - ENQUIRY PAGE
+                                                 ================================= */
+
+.enquiry-page {
+    min-height: 100vh;
+    padding: 35px 25px;
+    background-color: #f5f4f2;
+    box-sizing: border-box;
+}
+
+.enquiry-container {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 670px;
+    margin: 0 auto;
+    padding: 30px 35px 40px;
+    background-color: #ffffff;
+    border: 1px solid #d0ceca;
+    box-sizing: border-box;
+}
+
+/* Logo */
+
+.enquiry-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75px;
+    margin-bottom: 15px;
+}
+
+.enquiry-logo img {
+    display: block;
+    max-width: 220px;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Toolbar */
+
+.enquiry-toolbar {
+    display: grid;
+    grid-template-columns: 220px minmax(180px, 1fr) 270px;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 12px;
+}
+
+.enquiry-toolbar h2 {
+    margin-left: 40px;
+    color: #62a900;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* Search */
+
+.enquiry-search {
+    width: 100%;
+}
+
+.enquiry-search input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 8px 15px;
+    border: 3px solid #62a900;
+    border-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 22px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.enquiry-search input::placeholder {
+    color: #a5a5a5;
+    opacity: 1;
+}
+
+.enquiry-search input:focus {
+    border-color: #62a900;
+    box-shadow: none;
+}
+
+/* Add Enquiry Button */
+
+.enquiry-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 8px 15px;
+    border: 3px solid #62a900;
+    border-radius: 2px;
+    background-color: #62a900;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.enquiry-add-button:hover {
+    background-color: #528f00;
+    border-color: #528f00;
+    color: #ffffff;
+}
+
+/* Table Wrapper */
+
+.enquiry-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table */
+
+.enquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: #111111;
+    font-family: inherit;
+}
+
+.enquiry-table th,
+.enquiry-table td {
+    padding: 9px 50px;
+    border: 2px solid #ffffff;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+/* Table Heading */
+
+.enquiry-table thead th {
+    background-color: #62a900;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Table Body */
+
+.enquiry-table tbody tr:nth-child(odd) {
+    background-color: #dfe8d3;
+}
+
+.enquiry-table tbody tr:nth-child(even) {
+    background-color: #edf2e8;
+}
+
+.enquiry-table td {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Display-only Fields */
+
+.enquiry-label {
+    display: block;
+    font-weight: 400;
+}
+
+.enquiry-description {
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+/* Quantity - Editable Input */
+
+.enquiry-quantity {
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    min-width: 55px;
+    height: 40px;
+    padding: 5px 8px;
+    border: 1px solid #c7d7b8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.enquiry-quantity:focus {
+    border-color: #62a900;
+    outline: 2px solid rgba(98, 169, 0, 0.15);
+}
+
+/* Place Order Button */
+
+.enquiry-order-button {
+    display: inline-block;
+    padding: 0 7px;
+    border: 2px solid #62a900;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #62a900;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enquiry-order-button:hover {
+    background-color: #62a900;
+    color: #ffffff;
+}
+
+/* Empty State */
+
+.enquiry-table .enquiry-empty {
+    padding: 25px 12px;
+    background-color: #edf2e8;
+    color: #777777;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .enquiry-container {
+        padding: 25px 20px;
+    }
+
+    .enquiry-toolbar {
+        grid-template-columns: 180px minmax(150px, 1fr) 200px;
+        gap: 15px;
+    }
+
+    .enquiry-toolbar h2 {
+        font-size: 23px;
+    }
+
+    .enquiry-add-button {
+        font-size: 21px;
+    }
+
+    .enquiry-table th,
+    .enquiry-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .enquiry-page {
+        padding: 15px 8px;
+    }
+
+    .enquiry-container {
+        padding: 20px 12px;
+    }
+
+    .enquiry-logo {
+        margin-bottom: 20px;
+    }
+
+    .enquiry-toolbar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .enquiry-toolbar h2 {
+        font-size: 23px;
+    }
+
+    .enquiry-search input {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .enquiry-add-button {
+        min-height: 45px;
+        font-size: 19px;
+    }
+
+    .enquiry-table {
+        min-width: 850px;
+    }
+
+    .enquiry-table th,
+    .enquiry-table td {
+        padding: 8px;
+    }
+}
+
 
