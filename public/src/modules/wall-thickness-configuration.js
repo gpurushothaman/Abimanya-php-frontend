@@ -5,6 +5,9 @@
       (value - wallThicknessMin) / (wallThicknessMax - wallThicknessMin);
     wallBlendThickness = Math.max(0, Math.min(1, blend));
 
+      //store
+      customized_door_data.wall.thickness = value;
+
     if (scene.getObjectByName("3A")) {
       const wallDict = mesh_wall.morphTargetDictionary;
       mesh_wall.morphTargetInfluences[wallDict["_3a_thickness"]] =

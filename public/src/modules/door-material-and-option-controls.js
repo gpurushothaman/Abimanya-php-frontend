@@ -4,6 +4,12 @@ $("#door-design").on("change", function () {
     "#door-design option:selected"
   ).text();
 
+  //store
+  customized_door_data.door.design = $(
+    "#door-design option:selected"
+  ).text();
+
+
   const subDesignDropdown = $("#door-subdesign");
   const doorModelsDropdown = $("#door-models");
   const doorShadesDropdown = $("#door-shades");
@@ -74,6 +80,11 @@ $("#door-frames").on("change", function () {
   }
 
   STORE_CUSTOMIZED_DATA.frame["frame"] = $(
+    "#door-frames option:selected"
+  ).text();
+
+  //store
+  customized_door_data.frame.frame = $(
     "#door-frames option:selected"
   ).text();
 
@@ -249,11 +260,21 @@ $("#door-orientation").on("change", function () {
   STORE_CUSTOMIZED_DATA.orientation["position"] = $(
     "#door-orientation option:selected"
   ).text();
+
+  //store
+  customized_door_data.door.orientation = $(
+    "#door-orientation option:selected"
+  ).text();
 });
 
 $("#door-threshold").on("change", function () {
   selectedDoorThreshold = $(this).val();
   STORE_CUSTOMIZED_DATA.threshold["option"] = $(
+    "#door-threshold option:selected"
+  ).text();
+
+  //store
+  customized_door_data.door.threshold = $(
     "#door-threshold option:selected"
   ).text();
 
@@ -295,6 +316,11 @@ $("#door-threshold").on("change", function () {
 $("#door-frameType").on("change", function () {
   selectedDoorFrameType = $(this).val();
   STORE_CUSTOMIZED_DATA.frame["type"] = $(
+    "#door-frameType option:selected"
+  ).text();
+
+  //store
+  customized_door_data.frame.type = $(
     "#door-frameType option:selected"
   ).text();
 
@@ -523,6 +549,11 @@ $(document).on("change", "#door-frameSection", function () {
   ).text();
   STORE_CUSTOMIZED_DATA.frame["cost"] =
     $("#door-frameSection option:selected").data("cost") || "";
+
+  //store
+  customized_door_data.frame.section = $(
+    "#door-frameSection option:selected"
+  ).text();
 
   let framesection3bDictName = selectedFrameSection?.replace("_3a", "_3b");
   let thresholdDictName = selectedFrameSection?.replace("_F", "_T");
@@ -767,6 +798,13 @@ $(document).on("change", "#door-thickness", function () {
   )
     .text()
     ?.replace("DT_", "");
+
+  //store
+  customized_door_data.door.thickness = $(
+    "#door-thickness option:selected"
+  ) .text()?.replace("DT_", "");
+
+
   STORE_CUSTOMIZED_DATA.door_thickness["cost"] =
     COSTING?.door?.[selectedDoorDesign]?.[selectedDoorSubDesign]?.[
       selectedDoorThickness
@@ -895,6 +933,11 @@ $(document).on(
     STORE_CUSTOMIZED_DATA.architrave[
       id === "door-frontArchitrave" ? "front" : "back"
     ] = opt;
+    
+  //store
+  customized_door_data.architrave[
+    id === "door-frontArchitrave" ? "front" : "back"
+  ] = opt;
 
     if (selectedDoorFrame === "full") {
       const architraveDict =
@@ -946,6 +989,13 @@ $("#door-frameTypeOptions").on("change", function () {
   STORE_CUSTOMIZED_DATA.frame["Section"] = $(
     "#door-frameTypeOptions option:selected"
   ).text();
+
+  
+  //store
+  customized_door_data.frame.typeOption = $(
+    "#door-frameTypeOptions option:selected"
+  ).text();
+
 
   const doorFrameSectionDropdown = $("#door-frameSection");
   doorFrameSectionDropdown.empty();
@@ -1071,6 +1121,11 @@ $("#door-subdesign").on("change", function () {
   let doorJambLoc = selectedJambLocation === "front" ? "3A" : "3B";
   selectedDoorSubDesign = $(this).val();
   STORE_CUSTOMIZED_DATA.door_design["type"] = $(
+    "#door-subdesign option:selected"
+  ).text();
+
+  //store
+  customized_door_data.door.subDesign = $(
     "#door-subdesign option:selected"
   ).text();
 

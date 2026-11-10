@@ -2,7 +2,7 @@ async function generateQuotation() {
   try {
     // Hide the 3D Viewer & overlay icons so the quotation displays on a clean white page
     const container = document.getElementById("container");
-    if (container) container.style.display = "none";
+    //if (container) container.style.display = "none";
 
     const overlays = document.querySelectorAll(
       ".logo-top-right, .logo-bottom-right, .floating-ui, .up-arrow"

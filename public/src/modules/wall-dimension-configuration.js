@@ -246,6 +246,13 @@ $("#jamb-location").on("change", function () {
     "#jamb-location option:selected"
   ).text();
 
+  
+  //store
+  customized_door_data.jamb.location = $(
+    "#jamb-location option:selected"
+  ).text();
+
+
   let modelConfig =
     selectedJambLocation === "front"
       ? ADJUSTABLE_MODEL_SETTINGS.model3a

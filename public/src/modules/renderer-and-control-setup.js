@@ -29,6 +29,7 @@
   //Door location
   $("#door-locations").on("change", function () {
     STORE_CUSTOMIZED_DATA.door_location["location"] = selectedDoorLocation = $(this).val();
+    customized_door_data.door.location = selectedDoorLocation;
   });
 
   //Theme mode
@@ -51,6 +52,11 @@
   $("#WallHeightSlider").on("input", function () {
     const value = parseFloat($(this).val());
     $("#wallHeightValue").text(value);
+    
+    //store
+    customized_door_data.wall.height = value;
+
+
     let blend = (value - wallHeightMin) / (wallHeightMax - wallHeightMin);
 
     wallBlendHeight = Math.max(0, Math.min(1, blend));
@@ -84,6 +90,9 @@
     const value = parseFloat($(this).val());
     $("#wallWidthValue").text(value);
     let blend = (value - wallWidthMin) / (wallWidthMax - wallWidthMin);
+
+     //store
+     customized_door_data.wall.width = value;
 
     wallBlendWidth = Math.max(0, Math.min(1, blend));
     if (scene.getObjectByName("3A")) {
@@ -160,6 +169,9 @@
     $("#wallHeightValue").text(value);
     let blend = (value - wallHeightMin) / (wallHeightMax - wallHeightMin);
 
+      //store
+      customized_door_data.wall.height = value;
+
     wallBlendHeight = Math.max(0, Math.min(1, blend));
     if (scene.getObjectByName("3A")) {
       //3A
@@ -231,6 +243,9 @@
     $("#WallWidthSlider").val(value);
     $("#wallWidthValue").text(value);
     let blend = (value - wallWidthMin) / (wallWidthMax - wallWidthMin);
+
+    //store
+    customized_door_data.wall.width = value;
 
     wallBlendWidth = Math.max(0, Math.min(1, blend));
     if (scene.getObjectByName("3A")) {

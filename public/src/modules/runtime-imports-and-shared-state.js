@@ -106,7 +106,7 @@ let customized_door_data = {
   frame: {
     frame: "Full",
     type: "Solid Wood Jamb",
-    subType: "African Teak",
+    typeOption: "African Teak",
     section:"90 x 60"
   },
   wall:{

@@ -76,6 +76,11 @@ $("#door-models").on("change", function () {
     "#door-models option:selected"
   ).text();
 
+  //store
+  customized_door_data.door.models = $(
+    "#door-models option:selected"
+  ).text();
+
   //Apply Dynamic door
   let dynamicDoorData =
     MODEL_SETTINGS?.doors?.category?.[selectedDoorDesign]?.models?.[
@@ -208,6 +213,11 @@ $("#door-shades").on("change", function () {
   selectedDoorActiveTab = "shades";
   selectedDoorShadeType = $(this).val();
   STORE_CUSTOMIZED_DATA.door_design["shades"] = $(
+    "#door-shades option:selected"
+  ).text();
+
+  //store
+  customized_door_data.door.shades = $(
     "#door-shades option:selected"
   ).text();
 
