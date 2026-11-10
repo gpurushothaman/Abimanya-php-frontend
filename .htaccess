@@ -1,13 +1,13 @@
 
 RewriteEngine On
-RewriteBase /abimanyaphp/
+RewriteBase /Abimanya-php-frontend/
 
 # Redirect direct /public URLs to clean URLs
-RewriteCond %{THE_REQUEST} \s/+abimanyaphp/public(?:/([^\s?]*))?[\s?] [NC]
-RewriteRule ^public/?(.*)$ /abimanyaphp/$1 [R=302,L,NE]
+RewriteCond %{THE_REQUEST} \s/+Abimanya-php-frontend/public(?:/([^\s?]*))?[\s?] [NC]
+RewriteRule ^public/?(.*)$ /Abimanya-php-frontend/$1 [R=302,L,NE]
 
 # Serve existing files inside public (CSS, JS, images)
-RewriteCond %{DOCUMENT_ROOT}/abimanyaphp/public/$1 -f
+RewriteCond %{DOCUMENT_ROOT}/Abimanya-php-frontend/public/$1 -f
 RewriteRule ^(.+)$ public/$1 [L]
 
 # Send all page requests through the central router

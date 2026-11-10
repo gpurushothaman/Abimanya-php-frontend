@@ -28,7 +28,7 @@
   });
   //Door location
   $("#door-locations").on("change", function () {
-    STORE_CUSTOMIZED_DATA.door_location["location"] = $(this).val();
+    STORE_CUSTOMIZED_DATA.door_location["location"] = selectedDoorLocation = $(this).val();
   });
 
   //Theme mode

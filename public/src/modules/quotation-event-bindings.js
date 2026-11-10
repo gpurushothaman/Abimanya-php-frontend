@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
   // 1. Bind to the REAL green submit button in the sidebar
   const submitBtn = document.getElementById("submitdata");
-
   if (submitBtn) {
     submitBtn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -38,4 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
       generateQuotation();
     }
   });
-});
+// });

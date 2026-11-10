@@ -11,6 +11,7 @@ let container, renderer, scene, camera, controls;
 const $loaderDiv = $("#loader");
 let doorOnlyStatus = true;
 let switchMode = true;
+let selectedDoorLocation = "";
 let selectedDoorDesign = "laminate";
 let selectedDoorSubDesign = "elite";
 let selectedDoorModelType = "LE_1";
@@ -89,3 +90,36 @@ let wallBlendHeight = Math.max(0, Math.min(1, blendHeightVal)),
 let selectedFrameSection = "";
 let selectedDoorThickness = "";
 let selectedJambLocation = "front";
+
+//Store Customized - Work
+let customized_door_data = {
+  door: {
+    location: "",
+    design: "Laminate",
+    subDesign: "Elite",
+    models: "LE 1",
+    shades: "Europian Walnut",
+    thickness: "32",
+    threshold: "No",
+    orientation:"RHS",
+  },
+  frame: {
+    frame: "Full",
+    type: "Solid Wood Jamb",
+    subType: "African Teak",
+    section:"90 x 60"
+  },
+  wall:{
+    height:"2100",
+    width:"850",
+    thickness:"140"
+  },
+  jamb:{
+    location:"Front",
+    size:""
+  },
+  architrave:{
+    front:"S40",
+    back:"S40"
+  }
+};
