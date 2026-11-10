@@ -193,10 +193,8 @@
                         </span>
                     </a>
 
-                    <a href="/abimanyaphp/login" class="login-link ms-1">
-                        Sign In
-                    </a>
-                    <input type="submit" value="click" />
+                 
+                <button type="submit" class="btn btn-primary login-link">Sign In</button>
                 </div>
 
             </form>

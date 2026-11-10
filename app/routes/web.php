@@ -33,4 +33,8 @@ return [
         'file' => 'pages/userregister/index.php',
         'middleware' => ['guest'],
     ],
+     '/enquiry' => [
+        'file' => 'enquiry.php',
+        'middleware' => ['guest'],
+    ],
 ];
