@@ -38,8 +38,8 @@
         flex-direction: column;
       ">
   <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem"></div>
-  <div class="progress w-50">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="progress-bar" style="width: 0%"></div>
+  <!-- <div class="progress w-50">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="progress-bar" style="width: 0%"></div> -->
   </div>
 </div>
 

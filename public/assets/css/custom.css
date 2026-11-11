@@ -842,7 +842,7 @@ body {
 }
 
 .tree li ul li.active {
-  background: #0d6efd;
+  background: #62a900;
   color: #fff;
   border-radius: 6px;
   padding-left: 8px;
@@ -2878,5 +2878,447 @@ textarea.form-control {
         padding: 8px;
     }
 }
+
+                                        /* =========================================================
+                                            ABIMANYA DOORS - COMPLETE GREEN THEME OVERRIDE
+                                                     Primary Green: #62a900 -THIYAGUU
+                                        ========================================================= */
+
+
+
+/* Dropdown Focus Border and Shadow */
+.form-select:focus {
+    border-color: #62a900 !important;
+    box-shadow: 0 0 0 0.25rem rgba(98, 169, 0, 0.20) !important;
+    outline: none !important;
+}
+
+/* Dropdown Selected Option */
+.form-select option:checked {
+    background-color: #62a900 !important;
+    color: #ffffff !important;
+}
+
+
+
+:root {
+  --ab-green: #62a900;
+  --ab-green-dark: #4d8500;
+  --ab-green-light: #eaf5dc;
+  --ab-green-soft: #f4f9ed;
+  --ab-green-border: #b7d995;
+  --ab-green-shadow: rgba(98, 169, 0, 0.20);
+}
+
+/* ---------- GLOBAL THEME ---------- */
+
+:root,
+body {
+  accent-color: var(--ab-green);
+}
+
+::selection {
+  background: var(--ab-green);
+  color: #ffffff;
+}
+
+
+/* ---------- ACCORDION HEADER - SIMPLE STYLE ---------- */
+
+.accordion,
+.accordion-item,
+.accordion-header {
+  background: transparent !important;
+  border: none !important;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed),
+.accordion-button:hover,
+.accordion-button:focus,
+.accordion-button:active {
+  background: transparent !important;
+  color: inherit !important;
+  font-weight: normal !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.accordion-button::after {
+  filter: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: none !important;
+}
+
+
+/* ---------- INPUTS AND SELECTS ---------- */
+
+.form-control,
+.form-select,
+.custom-input,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+textarea {
+  border: 1px solid var(--ab-green-border) !important;
+  background-color: #ffffff !important;
+  color: var(--ab-green-dark) !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+.custom-input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ab-green) !important;
+  background-color: #ffffff !important;
+  color: var(--ab-green-dark) !important;
+  box-shadow: 0 0 0 0.2rem var(--ab-green-shadow) !important;
+  outline: none !important;
+}
+
+.form-control:hover,
+.form-select:hover,
+.custom-input:hover,
+select:hover {
+  border-color: var(--ab-green) !important;
+}
+
+/* ---------- DROPDOWN OPTIONS ---------- */
+
+.form-select option,
+select option {
+  background-color: #ffffff !important;
+  color: var(--ab-green-dark) !important;
+}
+
+.form-select option:checked,
+select option:checked {
+  background-color: var(--ab-green) !important;
+  color: #ffffff !important;
+}
+
+.form-select option:hover,
+select option:hover {
+  background-color: var(--ab-green-light) !important;
+  color: var(--ab-green-dark) !important;
+}
+
+/* ---------- LABELS ---------- */
+
+.form-label,
+label {
+  color: var(--ab-green-dark);
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn-success,
+button.btn-success,
+#submitdata,
+button[type="submit"] {
+  background-color: var(--ab-green) !important;
+  border-color: var(--ab-green) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.btn-success:hover,
+button.btn-success:hover,
+#submitdata:hover,
+button[type="submit"]:hover {
+  background-color: var(--ab-green-dark) !important;
+  border-color: var(--ab-green-dark) !important;
+  color: #ffffff !important;
+}
+
+.btn-success:focus,
+.btn-success:active,
+button:focus-visible {
+  border-color: var(--ab-green) !important;
+  box-shadow: 0 0 0 0.2rem var(--ab-green-shadow) !important;
+  outline: none !important;
+}
+
+/* ---------- CHECKBOX AND RADIO ---------- */
+
+.form-check-input {
+  border-color: var(--ab-green-border) !important;
+  box-shadow: none !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--ab-green) !important;
+  border-color: var(--ab-green) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--ab-green) !important;
+  box-shadow: 0 0 0 0.2rem var(--ab-green-shadow) !important;
+}
+
+/* ---------- RANGE SLIDERS ---------- */
+
+input[type="range"] {
+  accent-color: var(--ab-green) !important;
+}
+
+.form-range::-webkit-slider-thumb {
+  background-color: var(--ab-green) !important;
+}
+
+.form-range::-moz-range-thumb {
+  background-color: var(--ab-green) !important;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  color: var(--ab-green-dark);
+}
+
+a:hover,
+a:focus {
+  color: var(--ab-green);
+}
+
+/* ---------- ACTIVE / SELECTED ITEMS ---------- */
+
+.active,
+.list-group-item.active,
+.nav-pills .nav-link.active,
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--ab-green) !important;
+  border-color: var(--ab-green) !important;
+  color: #ffffff !important;
+}
+
+/* ---------- HOVER ITEMS ---------- */
+
+.list-group-item:hover,
+.dropdown-item:hover {
+  background-color: var(--ab-green-light) !important;
+  color: var(--ab-green-dark) !important;
+}
+
+/* ---------- BORDERS ---------- */
+
+.border,
+.border-top,
+.border-bottom,
+.border-start,
+.border-end {
+  border-color: var(--ab-green-border) !important;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+/* * {
+  scrollbar-color: var(--ab-green) var(--ab-green-soft);
+} */
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--ab-green-soft);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--ab-green);
+  border-radius: 10px;
+}
+/* 
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--ab-green-dark);
+} */
+
+/* ---------- BOOTSTRAP PRIMARY COLORS ---------- */
+
+.bg-primary {
+  background-color: var(--ab-green) !important;
+}
+
+.text-primary {
+  color: var(--ab-green) !important;
+}
+
+.border-primary {
+  border-color: var(--ab-green) !important;
+}
+
+.btn-primary {
+  background-color: var(--ab-green) !important;
+  border-color: var(--ab-green) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--ab-green-dark) !important;
+  border-color: var(--ab-green-dark) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.2rem var(--ab-green-shadow) !important;
+}
+
+/* ---------- TABLES ---------- */
+
+.table,
+.table td,
+.table th {
+  border-color: var(--ab-green-border) !important;
+}
+
+.table-active,
+.table-primary {
+  background-color: var(--ab-green-light) !important;
+  color: var(--ab-green-dark) !important;
+}
+
+/* ---------- PROGRESS ---------- */
+
+.progress {
+  background-color: var(--ab-green-light) !important;
+}
+
+.progress-bar {
+  background-color: var(--ab-green) !important;
+}
+
+/* ---------- REMOVE BLUE FOCUS OUTLINES ---------- */
+
+*:focus {
+  outline-color: var(--ab-green) !important;
+}
+
+*:focus-visible {
+  outline-color: var(--ab-green) !important;
+}
+
+/* Dropdown and input selected text */
+#specPanel .form-control,
+#specPanel .form-select,
+#specPanel .custom-input,
+#specPanel select,
+#specPanel input,
+#specPanel textarea {
+    color: #333333 !important;
+}
+
+/* Dropdown options */
+#specPanel .form-select option,
+#specPanel select option {
+    color: #333333 !important;
+    background-color: #ffffff !important;
+}
+
+/* Labels: Frame, Designs, Height, Width, etc. */
+#specPanel label,
+#specPanel .form-label {
+    color: #333333 !important;
+}
+
+/* Text inside dropdown and customization fields */
+#specPanel .accordion-body {
+    color: #333333 !important;
+}
+
+
+
+
+
+
+/* ==========================================
+   ABIMANYA QUOTATION - BRAND GREEN THEME
+   ========================================== */
+
+#quotation-container {
+    --quote-green: #7acb08;
+    --quote-green-dark: #4d8500;
+    --quote-green-light: #eaf5dc;
+}
+
+/* All quotation section headings */
+#quotation-container .section-title {
+    background: #7acb08 !important;
+    background-color: #7acb08 !important;
+    color: #ffffff !important;
+    border-color: #7acb08 !important;
+}
+
+/* Estimate number badge */
+#quotation-container .est-badge {
+    background: #7acb08 !important;
+    background-color: #7acb08 !important;
+    color: #ffffff !important;
+    border-color: #7acb08 !important;
+}
+
+/* Download button */
+#quotation-container .quotation-download-btn {
+    background: #7acb08 !important;
+    background-color: #7acb08 !important;
+    border-color: #7acb08 !important;
+    color: #ffffff !important;
+}
+
+/* Place order button */
+#quotation-container .placeorder-btn {
+    background: #7acb08 !important;
+    background-color: #7acb08 !important;
+    border-color: #7acb08 !important;
+    color: #ffffff !important;
+}
+
+/* Hover effects */
+#quotation-container .quotation-download-btn:hover,
+#quotation-container .placeorder-btn:hover {
+    background: #4d8500 !important;
+    border-color: #4d8500 !important;
+    color: #ffffff !important;
+}
+
+/* Grand total row */
+#quotation-container .total-row,
+#quotation-container .total-row td {
+    background: #7acb08 !important;
+    color: #ffffff !important;
+    border-color: #7acb08 !important;
+}
+
+/* Subtotal row */
+#quotation-container .subtotal-row {
+    background: #eaf5dc !important;
+}
+
+/* Existing dark teal amount text */
+#quotation-container .subtotal-row td,
+#quotation-container .items-table td,
+#quotation-container .commercial-table td {
+    border-color: #e1e8d9;
+}
+
+/* Green top border */
+#quotation-container .quotation-header {
+    border-bottom-color: #7acb08 !important;
+}
+
+/* Green terms icons */
+#quotation-container .terms-icon {
+    color: #7acb08 !important;
+}
+
+
+
+
+
 
 
