@@ -28,11 +28,7 @@
 
             <!-- Left: Company Logo -->
             <a href="<?= url('/') ?>" class="abimanya-logo-link">
-                <img
-                src="<?= url('assets/logo/company-logo.PNG') ?>"
-                alt="Abimanya Doors"
-                class="abimanya-header-logo"
-            >
+                <img src="<?= url('assets/logo/company-logo.PNG') ?>" alt="Abimanya Doors" class="abimanya-header-logo">
             </a>
 
             <!-- Right: Header Icons -->
@@ -67,6 +63,17 @@
                         <span>Logout</span>
                     </a>
 
+                    <a href="<?= url('/cart') ?>" >
+
+                    <button class="btn btn-light position-relative">
+                        <i class="bi bi-cart3 fs-4"></i>
+
+                        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <?php echo $_SESSION['user']['cartCount'];?>
+                        </span>
+                    </button>
+                    </a>
+
                 <?php else : ?>
 
                     <a href="<?= url('login') ?>" class="abimanya-header-link">
@@ -77,17 +84,15 @@
                 <?php endif; ?>
 
 
+
+
+
                 <?php
 
                 if (!empty($_SESSION['user'])) : ?>
 
                     <div class="user-profile">
-                        <button
-                            type="button"
-                            class="profile-trigger"
-                            id="profileTrigger"
-                            aria-label="Open profile"
-                            aria-expanded="false">
+                        <button type="button" class="profile-trigger" id="profileTrigger" aria-label="Open profile" aria-expanded="false">
                             <?= htmlspecialchars($initial, ENT_QUOTES, 'UTF-8') ?>
                         </button>
 
@@ -107,9 +112,7 @@
                                 </div>
                             </div>
 
-                            <a
-                                href="<?= url('public/logout.php') ?>"
-                                class="profile-signout">
+                            <a href="<?= url('public/logout.php') ?>" class="profile-signout">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign out</span>
                             </a>
@@ -119,11 +122,7 @@
                 <?php else : ?>
 
                     <div class="user-profile">
-                        <button
-                            type="button"
-                            class="profile-trigger"                         
-                            aria-label="Open profile"
-                            aria-expanded="false">
+                        <button type="button" class="profile-trigger" aria-label="Open profile" aria-expanded="false">
                             <?= htmlspecialchars("P", ENT_QUOTES, 'UTF-8') ?>
                         </button>
                     </div>

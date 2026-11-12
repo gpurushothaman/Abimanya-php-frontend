@@ -95,8 +95,42 @@ async function takeTwoScreenshots() {
 
     console.log("Front:", croppedFront);
     console.log("Back:", croppedBack);
+    productSaveToCart(croppedFront, croppedBack);
   } catch (error) {
     console.error("Screenshot Error:", error);
+  }
+}
+
+async function productSaveToCart(croppedFront, croppedBack) {
+  const { addToCartUrl, cartUrl, customerCode, api_token } = window.APP_CONFIG;
+  const formData = {
+    description: JSON.stringify(customized_door_data),
+    customerCode: customerCode,
+    title: customized_door_data?.door?.location,
+    quantity: "1",
+    price: STORE_CUSTOMIZED_DATA.grandTotal ?? "0",
+    frontImage: croppedFront,
+    backImage: croppedBack,
+  };
+
+  try {
+    const response = await axios.post(addToCartUrl, formData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${api_token}`,
+      },
+      ///withCredentials: true
+    });
+
+    if (response.data.success) {
+      setTimeout(() => {
+        window.location.href = cartUrl;
+      }, 2000);
+    }
+
+    console.log("track upload response:", response.data);
+  } catch (error) {
+    console.error("Request failed:", error.response?.data || error.message);
   }
 }
 

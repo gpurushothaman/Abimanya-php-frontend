@@ -140,5 +140,7 @@ function updateCommercialTotals(comm, overwriteTransport = true) {
   document.getElementById("comm-grand").textContent =
     "₹ " +
     comm.grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 });
+
+    STORE_CUSTOMIZED_DATA.grandTotal = comm.grandTotal;
 }
 

@@ -722,5 +722,15 @@
     </div>
   </div>
 </div>
+
+<script>
+    window.APP_CONFIG = <?= json_encode([
+                            'addToCartUrl' => rtrim(getenv('APP_API_URL'), '/') . '/cart',
+                            'cartUrl' => htmlspecialchars(url('cart')),
+                            'customerCode' => $_SESSION['user']['customerCode'] ?? null,
+                            'api_token' => $_SESSION['api_token'] ?? null,
+                        ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
+</script>
+
 <script type="module" src="<?= main('build.js') ?>"></script>
 <?php require_once __DIR__ . '/../../../app/includes/footer.php'; ?>

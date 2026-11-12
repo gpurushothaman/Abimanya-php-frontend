@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $data = json_decode(file_get_contents('php://input'), true);
 $token = is_array($data) ? trim((string)($data['token'] ?? '')) : '';
+$cartCount = is_array($data) ? trim((string)($data['cartCount'] ?? '0')) : '0';
 
 if ($token === '') {
     http_response_code(401);
@@ -75,6 +76,8 @@ $_SESSION['user'] = [
     'name' => (string)($verifiedUser['name'] ?? ''),
     'email' => (string)($verifiedUser['email'] ?? ''),
     'role' => (string)($verifiedUser['role'] ?? 'user'),
+    'customerCode' => (string)($verifiedUser['customerCode'] ?? ''),
+    'cartCount' => $cartCount
 ];
 $_SESSION['api_token'] = $token;
 

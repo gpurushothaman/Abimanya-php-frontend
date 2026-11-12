@@ -22,6 +22,8 @@ form.addEventListener("submit", async (event) => {
     });
 
     const token = response.data?.token;
+    const cartCount = response.data?.cartCount;
+  
 
     if (!response.data?.success || !token) {
       throw new Error("The API did not return a valid login token.");
@@ -30,7 +32,7 @@ form.addEventListener("submit", async (event) => {
     // Create PHP session.
     const sessionResponse = await axios.post(
       sessionLoginUrl,
-      { token },
+      { token, cartCount },
       {
         headers: {
           "Content-Type": "application/json",

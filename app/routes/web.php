@@ -37,4 +37,8 @@ return [
         'file' => 'enquiry.php',
         'middleware' => ['guest'],
     ],
+    '/cart' => [
+        'file' => 'pages/cart/index.php',
+        'middleware' => ['auth'],
+    ],
 ];
