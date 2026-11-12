@@ -2714,10 +2714,10 @@ textarea.form-control {
 
 .enquiry-table th,
 .enquiry-table td {
-    padding: 9px 50px;
+    /* padding: 9px 50px; */
     border: 2px solid #ffffff;
-    text-align: left;
-    vertical-align: top;
+    text-align: center;
+    vertical-align: middle;
     overflow-wrap: anywhere;
 }
 
@@ -3317,8 +3317,23 @@ a:focus {
 }
 
 
+.cart-product-image {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-
-
-
-
+.cart-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+  display: block;
+}

@@ -79,7 +79,11 @@ $_SESSION['user']['cartCount'] =
                             ?>
 
                             <tr class="enquiry-row">
-                                <td> <img src="<?= $imageUrl ?>" width="60" height="60" style="border-radius: 50%; object-fit: cover;" alt="Avatar" /></td>
+                                <td>
+                                    <center>
+                                    <img src="<?= $imageUrl ?>" width="60" height="60" style="border-radius: 50%; object-fit: cover;" alt="Avatar" />
+                                    </center>
+                                </td>
                                 <td><span class="enquiry-label"><?= !empty($item['updatedAt'])
                                                                     ? date('jS M Y', strtotime($item['updatedAt']))
                                                                     : '-' ?></span></td>
@@ -87,10 +91,13 @@ $_SESSION['user']['cartCount'] =
                                 <td><?= htmlspecialchars($item['title'] ?? '') ?></td>
                                 <td><?= htmlspecialchars($door['design'] ?? '') ?></td>
                                 <td>
-                                    <input type="number" class="enquiry-quantity" name="quantity" min="1" step="1" value="<?= htmlspecialchars((string)($item['quantity'] ?? 1), ENT_QUOTES, 'UTF-8') ?>" aria-label="Quantity">
+                                    <center>
+                                        <input type="number" class="enquiry-quantity" name="quantity" min="1" step="1" value="<?= htmlspecialchars((string)($item['quantity'] ?? 1), ENT_QUOTES, 'UTF-8') ?>" aria-label="Quantity">
+                                    </center>
                                 </td>
 
                                 <td>
+                                    INR
                                     <span class="enquiry-total-price" data-unit-price="<?= htmlspecialchars((string)($item['price'] ?? 0), ENT_QUOTES, 'UTF-8') ?>">
                                         <?= number_format((float)($item['price'] ?? 0) * (int)($item['quantity'] ?? 1), 2, '.', '') ?>
                                     </span>
@@ -98,19 +105,21 @@ $_SESSION['user']['cartCount'] =
                                 <td>
                                     <i class="bi bi-arrow-right-circle-fill enquiry-order-button"></i>
                                 </td>
-
                             </tr>
 
                         <?php endforeach; ?>
+
                         <tr class="enquiry-grand-total-row">
                             <td colspan="6" style="text-align: right;">
                                 <strong>Grand Total:</strong>
                             </td>
                             <td>
+                                INR
                                 <strong id="enquiryGrandTotal">0.00</strong>
                             </td>
-                            <td></td>
+                            <td> <i class="bi bi-arrow-right-circle-fill enquiry-order-button"></i></td>
                         </tr>
+
                     <?php else : ?>
                         <tr id="enquiryEmptyRow">
                             <td colspan="7" class="enquiry-empty">
@@ -153,55 +162,38 @@ $_SESSION['user']['cartCount'] =
 
     function updateEnquiryGrandTotal() {
 
-let grandTotal = 0;
+        let grandTotal = 0;
 
-document.querySelectorAll(".enquiry-row").forEach(row => {
+        document.querySelectorAll(".enquiry-row").forEach(row => {
 
-    const quantityInput = row.querySelector(".enquiry-quantity");
-    const priceElement = row.querySelector(".enquiry-total-price");
+            const quantityInput = row.querySelector(".enquiry-quantity");
+            const priceElement = row.querySelector(".enquiry-total-price");
 
-    const quantity = Math.max(1, parseInt(quantityInput.value) || 1);
-    const unitPrice = parseFloat(priceElement.dataset.unitPrice) || 0;
+            const quantity = Math.max(1, parseInt(quantityInput.value) || 1);
+            const unitPrice = parseFloat(priceElement.dataset.unitPrice) || 0;
 
-    const totalPrice = quantity * unitPrice;
+            const totalPrice = quantity * unitPrice;
 
-    priceElement.textContent = totalPrice.toFixed(2);
+            priceElement.textContent = totalPrice.toFixed(2);
 
-    grandTotal += totalPrice;
-});
+            grandTotal += totalPrice;
+        });
 
-document.getElementById("enquiryGrandTotal").textContent =
-    grandTotal.toFixed(2);
-}
+        document.getElementById("enquiryGrandTotal").textContent =
+            grandTotal.toFixed(2);
+    }
 
-document.addEventListener("input", function (e) {
-if (e.target.classList.contains("enquiry-quantity")) {
-    updateEnquiryGrandTotal();
-}
-});
+    document.addEventListener("input", function(e) {
+        if (e.target.classList.contains("enquiry-quantity")) {
+            updateEnquiryGrandTotal();
+        }
+    });
 
-document.addEventListener("DOMContentLoaded", updateEnquiryGrandTotal);
+    document.addEventListener("DOMContentLoaded", updateEnquiryGrandTotal);
 
 
 
-    // document.addEventListener("input", function(e) {
 
-    //     if (e.target.classList.contains("enquiry-quantity")) {
-
-    //         const row = e.target.closest("tr");
-
-    //         const quantity = Math.max(1, parseInt(e.target.value) || 1);
-
-    //         const priceElement = row.querySelector(".enquiry-total-price");
-
-    //         const unitPrice = parseFloat(priceElement.dataset.unitPrice) || 0;
-
-    //         const totalPrice = quantity * unitPrice;
-
-    //         priceElement.textContent = totalPrice.toFixed(2);
-    //     }
-
-    // });
 
     // Quantity is editable. Connect this button to your order API
     // when the backend order endpoint is available.
