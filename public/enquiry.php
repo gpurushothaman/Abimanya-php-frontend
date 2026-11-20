@@ -1,4 +1,3 @@
-
 <?php
 // Enquiry records should be provided dynamically by your PHP backend.
 // Expected variable: $enquiries (array of enquiry records).
@@ -16,7 +15,7 @@ $enquiries = $enquiries ?? [];
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Existing project CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
@@ -43,8 +42,7 @@ $enquiries = $enquiries ?? [];
                         type="search"
                         id="enquirySearch"
                         placeholder="-search-"
-                        aria-label="Search enquiries"
-                    >
+                        aria-label="Search enquiries">
                 </div>
 
                 <a href="add-enquiry.php" class="enquiry-add-button">
@@ -107,7 +105,6 @@ $enquiries = $enquiries ?? [];
                                             ) ?>
                                         </span>
                                     </td>
-
                                     <td>
                                         <span class="enquiry-label enquiry-description">
                                             <?= htmlspecialchars(
@@ -126,12 +123,11 @@ $enquiries = $enquiries ?? [];
                                             min="1"
                                             step="1"
                                             value="<?= htmlspecialchars(
-                                                (string) ($enquiry['quantity'] ?? 1),
-                                                ENT_QUOTES,
-                                                'UTF-8'
-                                            ) ?>"
-                                            aria-label="Quantity"
-                                        >
+                                                        (string) ($enquiry['quantity'] ?? 1),
+                                                        ENT_QUOTES,
+                                                        'UTF-8'
+                                                    ) ?>"
+                                            aria-label="Quantity">
                                     </td>
 
                                     <td>
@@ -149,11 +145,10 @@ $enquiries = $enquiries ?? [];
                                             type="button"
                                             class="enquiry-order-button"
                                             data-enquiry-no="<?= htmlspecialchars(
-                                                $enquiry['enquiry_no'] ?? '',
-                                                ENT_QUOTES,
-                                                'UTF-8'
-                                            ) ?>"
-                                        >
+                                                                    $enquiry['enquiry_no'] ?? '',
+                                                                    ENT_QUOTES,
+                                                                    'UTF-8'
+                                                                ) ?>">
                                             Submit
                                         </button>
                                     </td>
@@ -175,7 +170,6 @@ $enquiries = $enquiries ?? [];
                     </tbody>
 
                 </table>
-
             </div>
 
         </section>
@@ -187,24 +181,24 @@ $enquiries = $enquiries ?? [];
         const searchInput = document.getElementById('enquirySearch');
         const tableBody = document.getElementById('enquiryTableBody');
 
-        searchInput.addEventListener('input', function () {
+        searchInput.addEventListener('input', function() {
             const searchText = this.value.trim().toLowerCase();
             const rows = tableBody.querySelectorAll('.enquiry-row');
 
-            rows.forEach(function (row) {
+            rows.forEach(function(row) {
                 const rowText = row.textContent.toLowerCase();
 
-                row.style.display = rowText.includes(searchText)
-                    ? ''
-                    : 'none';
+                row.style.display = rowText.includes(searchText) ?
+                    '' :
+                    'none';
             });
         });
 
         // Quantity is editable. Connect this button to your order API
         // when the backend order endpoint is available.
-        document.querySelectorAll('.enquiry-order-button').forEach(function (button) {
+        document.querySelectorAll('.enquiry-order-button').forEach(function(button) {
 
-            button.addEventListener('click', function () {
+            button.addEventListener('click', function() {
                 const row = this.closest('.enquiry-row');
                 const quantityInput = row.querySelector('.enquiry-quantity');
                 const quantity = Number(quantityInput.value);
@@ -229,5 +223,5 @@ $enquiries = $enquiries ?? [];
     </script>
 
 </body>
-</html>
 
+</html>
