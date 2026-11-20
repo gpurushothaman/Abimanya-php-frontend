@@ -84,9 +84,6 @@
                 <?php endif; ?>
 
 
-
-
-
                 <?php
 
                 if (!empty($_SESSION['user'])) : ?>
