@@ -135,9 +135,7 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -318,19 +316,20 @@ body {
 }
 
 /* When checked */
-.toggle-switch input:checked+.slider {
+.toggle-switch input:checked + .slider {
   background-color: #662d91;
   /* green */
 }
 
-.toggle-switch input:checked+.slider:before {
+.toggle-switch input:checked + .slider:before {
   transform: translateX(70px);
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: transparent;
-  filter: brightness(0) saturate(100%) invert(21%) sepia(65%) saturate(1373%) hue-rotate(262deg) brightness(93%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(65%) saturate(1373%)
+    hue-rotate(262deg) brightness(93%) contrast(98%);
 }
 #switchMode {
   transform: translateX(20px);
@@ -393,17 +392,16 @@ body {
 
 /* THIYAGU UPDATE something in quration table for closing tag */
 
-
 .quotation-container {
-   position: relative;
-    width: 85%;
-    height: 90vh;
-    background: #fff;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  width: 85%;
+  height: 90vh;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .quotation-close-btn {
   width: 34px;
@@ -424,13 +422,10 @@ body {
   transform: scale(1.05);
 }
 .quotation-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
 }
-
-
-
 
 @keyframes fadeIn {
   from {
@@ -447,7 +442,7 @@ body {
 .hidden {
   display: none !important;
 }
-                     /* THIYAGUU UPDATE something for header of quotation */
+/* THIYAGUU UPDATE something for header of quotation */
 .quotation-header {
   display: flex;
   align-items: center;
@@ -670,7 +665,6 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-
   .meta-grid,
   .table-layout-wrapper,
   .terms-grid,
@@ -1008,288 +1002,277 @@ body {
   break-inside: avoid;
 }
 
-
-
-
-                                                 
-                                    /*   THIYAGUUUU   ------- >>>>   Abimanya header page   */
-                                          /* =========================================
+/*   THIYAGUUUU   ------- >>>>   Abimanya header page   */
+/* =========================================
                                                            HEADER PAGE
                                            ========================================= */
 
 .abimanya-header {
-    width: 100%;
-    height: 65px;
-    background-color: #fbfcfb;
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 65px;
+  background-color: #fbfcfb;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .abimanya-header .container-fluid {
-    height: 100%;
-    padding: 0 20px;
+  height: 100%;
+  padding: 0 20px;
 }
 
 /* Company Logo */
 .abimanya-logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .abimanya-header-logo {
-    width: 145px;
-    height: 55px;
-    object-fit: contain;
+  width: 145px;
+  height: 55px;
+  object-fit: contain;
 }
 
 /* Right Side Navigation */
 .abimanya-header-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 /* Sign In, Login, Profile */
 .abimanya-header-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #333333;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .abimanya-header-link i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .abimanya-header-link:hover {
-    color: #198754;
+  color: #198754;
 }
 
 /* Mobile Screen */
 @media (max-width: 576px) {
+  .abimanya-header {
+    height: 55px;
+  }
 
-    .abimanya-header {
-        height: 55px;
-    }
+  .abimanya-header .container-fluid {
+    padding: 0 10px;
+  }
 
-    .abimanya-header .container-fluid {
-        padding: 0 10px;
-    }
+  .abimanya-header-logo {
+    width: 100px;
+    height: 45px;
+  }
 
-    .abimanya-header-logo {
-        width: 100px;
-        height: 45px;
-    }
+  .abimanya-header-nav {
+    gap: 12px;
+  }
 
-    .abimanya-header-nav {
-        gap: 12px;
-    }
+  .abimanya-header-link {
+    gap: 3px;
+    font-size: 10px;
+  }
 
-    .abimanya-header-link {
-        gap: 3px;
-        font-size: 10px;
-    }
-
-    .abimanya-header-link i {
-        font-size: 16px;
-    }
+  .abimanya-header-link i {
+    font-size: 16px;
+  }
 }
 
-
-
-
-
-                                    /*   THIYAGUUUU   ------- >>>>   Abimanya login page   */
-                                          /* =========================================
+/*   THIYAGUUUU   ------- >>>>   Abimanya login page   */
+/* =========================================
                                                      ABIMANYA LOGIN PAGE
                                            ========================================= */
 
-
-
 .login-page {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #a5f286;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #a5f286;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 30px 15px;
-    box-sizing: border-box;
+  padding: 30px 15px;
+  box-sizing: border-box;
 }
 
 /* White Login Card */
 
 .login-card {
-    width: 100%;
-    max-width: 400px;
+  width: 100%;
+  max-width: 400px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    padding: 25px 40px 20px;
-    border-radius: 24px;
+  padding: 25px 40px 20px;
+  border-radius: 24px;
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Logo inside the card */
 
 .login-card-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .login-card-logo img {
-    display: block;
+  display: block;
 
-    width: 220px;
-    height: 60px;
+  width: 220px;
+  height: 60px;
 
-    max-width: 100%;
-    object-fit: contain;
+  max-width: 100%;
+  object-fit: contain;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* Welcome Back Heading */
 
 .login-card h2 {
-    text-align: center;
+  text-align: center;
 
-    font-size: 24px;
-    font-weight: 700;
-    color: #172b46;
+  font-size: 24px;
+  font-weight: 700;
+  color: #172b46;
 
-    margin: 0 0 12px;
+  margin: 0 0 12px;
 }
 
 /* Subtitle */
 
 .login-subtitle {
-    text-align: center;
+  text-align: center;
 
-    color: #718096;
-    font-size: 15px;
+  color: #718096;
+  font-size: 15px;
 
-    margin: 0 0 12px;
+  margin: 0 0 12px;
 }
 
 /* Input Labels */
 
 .login-card .form-label {
-    display: block;
+  display: block;
 
-    color: #26364b;
-    font-weight: 600;
+  color: #26364b;
+  font-weight: 600;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Email and Password Input */
 
 .login-input-group {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    width: 100%;
-    height: 46px;
+  width: 100%;
+  height: 46px;
 
-    border: 1px solid #79c900;
-    border-radius: 12px;
+  border: 1px solid #79c900;
+  border-radius: 12px;
 
-    padding: 0 15px;
-    background-color: #ffffff;
+  padding: 0 15px;
+  background-color: #ffffff;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Input Icons */
 
 .login-input-group > i {
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    font-size: 21px;
-    color: #98a2b3;
+  font-size: 21px;
+  color: #98a2b3;
 
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 /* Input Field */
 
 .login-input-group .form-control {
-    flex: 1;
-    min-width: 0;
-    height: 50%;
+  flex: 1;
+  min-width: 0;
+  height: 50%;
 
-    border: none;
-    box-shadow: none;
-    outline: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
 
-    padding: 0;
-    background-color: transparent;
+  padding: 0;
+  background-color: transparent;
 
-    font-size: 15px;
+  font-size: 15px;
 }
 
 /* Input Focus */
 
 .login-input-group:focus-within {
-    border-color: #59a500;
+  border-color: #59a500;
 
-    box-shadow: 0 0 0 3px rgba(121, 201, 0, 0.12);
+  box-shadow: 0 0 0 3px rgba(121, 201, 0, 0.12);
 }
 
 /* Show / Hide Password Button */
 
 .password-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 
-    color: #98a2b3;
-    font-size: 20px;
+  color: #98a2b3;
+  font-size: 20px;
 
-    padding: 5px;
-    cursor: pointer;
+  padding: 5px;
+  cursor: pointer;
 }
 
 /* Login Button */
 
 .login-button {
-    display: block;
+  display: block;
 
-    margin-top: 35px;
-    margin-bottom: 25px;
-    width: 100%;
-    height: 46px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: 46px;
 
-    border: none;
-    border-radius: 12px;
+  border: none;
+  border-radius: 12px;
 
-    background-color: #62a900;
-    color: #ffffff;
+  background-color: #62a900;
+  color: #ffffff;
 
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: #528f00;
+  background-color: #528f00;
 }
 
 /* Hide browser's extra password reveal icon */
@@ -1297,649 +1280,638 @@ body {
 /* Microsoft Edge */
 input::-ms-reveal,
 input::-ms-clear {
-    display: none;
+  display: none;
 }
 
 /* Browser-specific password reveal controls */
 input[type="password"]::-webkit-credentials-auto-fill-button {
-    visibility: hidden;
-    display: none !important;
-    pointer-events: none;
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
 }
-
-
 
 /* Fix Login Email Input Double Border */
 
 .login-input-group {
-    display: flex;
-    align-items: center;
-    height: 46px;
-    padding: 0 15px;
-    border: 1px solid #79c900;
-    border-radius: 12px;
-    background: #ffffff;
-    box-sizing: border-box;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 15px;
+  border: 1px solid #79c900;
+  border-radius: 12px;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Remove inner input border and focus ring */
 .login-input-group input.form-control,
 .login-input-group input.form-control:focus {
-    flex: 1;
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    border-radius: 0 !important;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
 }
 
 /* Keep email icon aligned */
 .login-input-group > i {
-    flex-shrink: 0;
-    margin-right: 12px;
-    line-height: 1;
+  flex-shrink: 0;
+  margin-right: 12px;
+  line-height: 1;
 }
 
 /* Focus effect only on outer border */
 .login-input-group:focus-within {
-    border-color: #59a500;
-    box-shadow: 0 0 0 3px rgba(121, 201, 0, 0.12);
+  border-color: #59a500;
+  box-shadow: 0 0 0 3px rgba(121, 201, 0, 0.12);
 }
-
 
 /* Mobile Responsive */
 
 @media (max-width: 576px) {
+  .login-page {
+    padding: 20px 15px;
+  }
 
-    .login-page {
-        padding: 20px 15px;
-    }
+  .login-card {
+    padding: 35px 22px;
+    border-radius: 18px;
+  }
 
-    .login-card {
-        padding: 35px 22px;
-        border-radius: 18px;
-    }
+  .login-card-logo img {
+    width: 210px;
+    height: 55px;
+  }
 
-    .login-card-logo img {
-        width: 210px;
-        height: 55px;
-    }
+  .login-card h2 {
+    font-size: 25px;
+  }
 
-    .login-card h2 {
-        font-size: 25px;
-    }
+  .login-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 
-    .login-subtitle {
-        font-size: 14px;
-        margin-bottom: 30px;
-    }
-
-    .login-button {
-        height: 52px;
-    }
+  .login-button {
+    height: 52px;
+  }
 }
 
-
-
-                                       /* =========================================
+/* =========================================
                                          THIYAGU ----> ABIMANYA HOME PAGE - HERO SECTION
                                           ========================================= */
 
-
 .home-page {
-    min-height: 100vh;
-    background: #ffffff;
-    font-family: inherit;
-    color: #17364b;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: inherit;
+  color: #17364b;
 }
 
 /* Hero Layout */
 
 .home-hero {
-    min-height: 78vh;
-    display: grid;
-    grid-template-columns: 44% 56%;
-    overflow: hidden;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  overflow: hidden;
 }
 
 /* Left Content */
 
 .home-hero-content {
-    padding: 55px 35px 35px max(35px, calc((100vw - 1300px) / 2));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 55px 35px 35px max(35px, calc((100vw - 1300px) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-eyebrow {
-    color: #62a900;
-    font-size: 15px;
-    font-weight: 900;
-    margin-bottom: 12px;
+  color: #62a900;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 12px;
 }
 
 .home-hero-content h1 {
-    font-size: clamp(32px, 3vw, 48px);
-    line-height: 1.08;
-    font-weight: 800;
-    color: #17364b;
-    margin-bottom: 18px;
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 1.08;
+  font-weight: 800;
+  color: #17364b;
+  margin-bottom: 18px;
 }
 
 .home-hero-content h1 span {
-    display: block;
-    color: #62a900;
+  display: block;
+  color: #62a900;
 }
 
 .home-description {
-    color: #526b7e;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 480px;
-    margin-bottom: 30px;
+  color: #526b7e;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 30px;
 }
 
 /* Feature Items */
 
 .home-features {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 30px;
 }
 
 .home-feature {
-    padding: 8px 10px;
-    border-right: 1px solid #e3ebdf;
+  padding: 8px 10px;
+  border-right: 1px solid #e3ebdf;
 }
 
 .home-feature:first-child {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .home-feature:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .home-feature i {
-    display: block;
-    font-size: 23px;
-    color: #62a900;
-    margin-bottom: 10px;
+  display: block;
+  font-size: 23px;
+  color: #62a900;
+  margin-bottom: 10px;
 }
 
 .home-feature h6 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .home-feature p {
-    color: #718096;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 0;
+  color: #718096;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 /* Buttons */
 
 .home-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .home-signin-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    min-width: 155px;
-    padding: 13px 24px;
-    border-radius: 30px;
-    background: #62a900;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-width: 155px;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: #62a900;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease;
 }
 
 .home-signin-button:hover {
-    background: #528f00;
-    color: #ffffff;
+  background: #528f00;
+  color: #ffffff;
 }
 
 .home-video-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: #528f00;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #528f00;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .home-video-link span {
-    display: grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #dcebcf;
-    font-size: 18px;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #dcebcf;
+  font-size: 18px;
 }
 
 /* Right Door Image */
 
 .home-hero-image {
-    position: relative;
-    min-height: 50px;
-    overflow: hidden;
-    background: #e9e4dc;
+  position: relative;
+  min-height: 50px;
+  overflow: hidden;
+  background: #e9e4dc;
 }
 
 .home-hero-image > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-image-caption {
-    position: absolute;
-    top: 12%;
-    right: 10%;
-    z-index: 1;
-    text-align: center;
-    pointer-events: none;
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
 }
 
 .home-image-caption h2 {
-    color: #528f00;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.3;
+  color: #528f00;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 /* Bottom Benefits */
 
 .home-benefits {
-    min-height: 100px;
-    padding: 20px max(30px, calc((100vw - 1300px) / 2));
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: 60px;
-    background: #f3f8ef;
+  min-height: 100px;
+  padding: 20px max(30px, calc((100vw - 1300px) / 2));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 60px;
+  background: #f3f8ef;
 }
 
 .home-benefit {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 5px 20px;
-    border-right: 1px solid #dce8d3;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 20px;
+  border-right: 1px solid #dce8d3;
 }
 
 .home-benefit:first-child {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .home-benefit:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .home-benefit > i {
-    color: #62a900;
-    font-size: 28px;
+  color: #62a900;
+  font-size: 28px;
 }
 
 .home-benefit h6 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .home-benefit p {
-    color: #718096;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 0;
+  color: #718096;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 /* Tablet */
 
 @media (max-width: 992px) {
-    .home-hero {
-        grid-template-columns: 1fr 1fr;
-    }
+  .home-hero {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .home-hero-content {
-        padding: 35px 20px;
-    }
+  .home-hero-content {
+    padding: 35px 20px;
+  }
 
-    .home-features {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .home-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .home-feature {
-        margin-bottom: 10px;
-    }
+  .home-feature {
+    margin-bottom: 10px;
+  }
 
-    .home-hero-image {
-        min-height: 500px;
-    }
+  .home-hero-image {
+    min-height: 500px;
+  }
 
-    .home-benefits {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .home-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 767px) {
-    .home-hero {
-        grid-template-columns: 1fr;
-    }
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
 
-    .home-hero-content {
-        padding: 40px 22px;
-    }
+  .home-hero-content {
+    padding: 40px 22px;
+  }
 
-    .home-hero-content h1 {
-        font-size: 36px;
-    }
+  .home-hero-content h1 {
+    font-size: 36px;
+  }
 
-    .home-hero-image {
-        min-height: 380px;
-    }
+  .home-hero-image {
+    min-height: 380px;
+  }
 
-    .home-benefits {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
+  .home-benefits {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 
-    .home-benefit {
-        border-right: none;
-        border-bottom: 1px solid #dce8d3;
-        padding: 12px 0;
-    }
+  .home-benefit {
+    border-right: none;
+    border-bottom: 1px solid #dce8d3;
+    padding: 12px 0;
+  }
 
-    .home-benefit:last-child {
-        border-bottom: none;
-    }
+  .home-benefit:last-child {
+    border-bottom: none;
+  }
 }
 
-
-
-                                                  /* =========================================
+/* =========================================
                                                         THIYAGUU - ABIMANYA REGISTER PAGE
 
                                                                   Register page 
                                                       ========================================= */
 
 .register-page {
-    min-height: 100vh;
-    background-color: #a5f286;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px 30px;
+  min-height: 100vh;
+  background-color: #a5f286;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px 30px;
 }
 
 /* Main Card - Both panels merge together */
 
 .register-card {
-    width: 100%;
-    max-width: 1320px;
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 /* Left Registration Form */
 
 .register-form-panel {
-    width: 52%;
-    padding: 28px;
-    background-color: #ffffff;
+  width: 52%;
+  padding: 28px;
+  background-color: #ffffff;
 }
 
 .register-logo {
-    text-align: center;
-    margin-bottom: 7px;
+  text-align: center;
+  margin-bottom: 7px;
 }
 
 .register-logo img {
-    width: 100;
-    height: 35px;
-    object-fit: contain;
+  width: 100;
+  height: 35px;
+  object-fit: contain;
 }
 
 /* Heading */
 
 .register-heading {
-    text-align: center;
-    margin-bottom: 4px;
+  text-align: center;
+  margin-bottom: 4px;
 }
 
 .register-heading h2 {
-    color: #172b46;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 2px;
+  color: #172b46;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 .register-heading p {
-    color: #718096;
-    font-size: 13px;
-    margin-bottom: 0;
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 /* Section Titles */
 
 .register-section-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #26364b;
-    font-size: 13px;
-    font-weight: 500;
-    border-bottom: 1px solid #dce8d3;
-    padding-bottom: 3px;
-    margin: 10px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #26364b;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid #dce8d3;
+  padding-bottom: 3px;
+  margin: 10px 0 10px;
 }
 
 .register-section-title i {
-    color: #62a900;
-    font-size: 11px;
+  color: #62a900;
+  font-size: 11px;
 }
 
 /* Form Labels */
 
 .register-form-panel .form-label {
-    display: block;
-    color: #26364b;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 3px;
+  display: block;
+  color: #26364b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
 }
 
 .register-form-panel .form-label span {
-    color: #dc3545;
+  color: #dc3545;
 }
 
 /* Inputs */
 
 .register-form-panel .form-control {
-    min-height: 32px;
-    border: 1px solid #a5d98b;
-    border-radius: 8px;
-    padding: 3px 8px;
-    font-size: 13px;
-    color: #26364b;
-    box-shadow: none;
+  min-height: 32px;
+  border: 1px solid #a5d98b;
+  border-radius: 8px;
+  padding: 3px 8px;
+  font-size: 13px;
+  color: #26364b;
+  box-shadow: none;
 }
 
 .register-form-panel .form-control:focus {
-    border-color: #62a900;
-    box-shadow: 0 0 0 3px rgba(98, 169, 0, 0.10);
+  border-color: #62a900;
+  box-shadow: 0 0 0 3px rgba(98, 169, 0, 0.1);
 }
 
 .register-form-panel .form-control::placeholder {
-    color: #8993a7;
+  color: #8993a7;
 }
 
 .register-form-panel small {
-    display: block;
-    color: #8993a7;
-    font-size: 10px;
-    margin-top: 4px;
+  display: block;
+  color: #8993a7;
+  font-size: 10px;
+  margin-top: 4px;
 }
 
 .register-form-panel .register-address {
-    resize: vertical;
-    min-height: 25px;
+  resize: vertical;
+  min-height: 25px;
 }
 
 /* Create Account Button */
 
 .register-button {
-    width: 100%;
-    min-height: 38px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 9px;
-    background-color: #62a900;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
+  width: 100%;
+  min-height: 38px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 9px;
+  background-color: #62a900;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .register-button:hover {
-    background-color: #528f00;
+  background-color: #528f00;
 }
 
 /* Sign In Link */
 
 .register-signin {
-    text-align: center;
-    color: #718096;
-    font-size: 15px;
-    margin: 10px 0 0;
+  text-align: center;
+  color: #718096;
+  font-size: 15px;
+  margin: 10px 0 0;
 }
 
 .register-signin a {
-    color: #62a900;
-    font-weight: 700;
-    text-decoration: none;
-    margin-left: 4px;
+  color: #62a900;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
 }
 
 .register-signin a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Right Door Image */
 
 .register-image-panel {
-    width: 48%;
-    min-height: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: #e9e4dc;
+  width: 48%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #e9e4dc;
 }
 
 .register-image-panel > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-
 @media (max-width: 992px) {
-    .register-form-panel {
-        width: 58%;
-        padding: 25px;
-    }
+  .register-form-panel {
+    width: 58%;
+    padding: 25px;
+  }
 
-    .register-image-panel {
-        width: 42%;
-        min-height: 750px;
-    }
+  .register-image-panel {
+    width: 42%;
+    min-height: 750px;
+  }
 
-    .register-image-text {
-        right: 5%;
-        left: 5%;
-        top: 30%;
-    }
+  .register-image-text {
+    right: 5%;
+    left: 5%;
+    top: 30%;
+  }
 
-    .register-image-text h2 {
-        font-size: 24px;
-    }
+  .register-image-text h2 {
+    font-size: 24px;
+  }
 
-    .register-image-text p {
-        font-size: 14px;
-    }
+  .register-image-text p {
+    font-size: 14px;
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 767px) {
-    .register-page {
-        padding: 15px;
-    }
+  .register-page {
+    padding: 15px;
+  }
 
-    .register-card {
-        flex-direction: column;
-        border-radius: 16px;
-    }
+  .register-card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
 
-    .register-form-panel {
-        width: 100%;
-        padding: 25px 20px;
-    }
+  .register-form-panel {
+    width: 100%;
+    padding: 25px 20px;
+  }
 
-    .register-image-panel {
-        width: 100%;
-        min-height: 320px;
-    }
+  .register-image-panel {
+    width: 100%;
+    min-height: 320px;
+  }
 
-    .register-image-text {
-        top: 30%;
-        left: 8%;
-        right: 8%;
-    }
+  .register-image-text {
+    top: 30%;
+    left: 8%;
+    right: 8%;
+  }
 
-    .register-heading h2 {
-        font-size: 24px;
-    }
+  .register-heading h2 {
+    font-size: 24px;
+  }
 }
 
-                                                      /* =========================================
+/* =========================================
                                                         PURUSOTH BRO - ABIMANYA REGISTER PAGE
 
                                                                   Register page 
                                                       ========================================= */
 
-
- .form-label {
+.form-label {
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 8px;
@@ -1965,7 +1937,7 @@ textarea.form-control {
 .form-control:focus,
 .form-select:focus {
   border-color: #5478a8;
-  box-shadow: 0 0 0 0.2rem rgba(24, 59, 101, 0.10);
+  box-shadow: 0 0 0 0.2rem rgba(24, 59, 101, 0.1);
 }
 
 .iti {
@@ -2011,19 +1983,19 @@ textarea.form-control {
 }
 
 .login-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    min-width: 155px;
-    padding: 13px 24px;
-    border-radius: 30px;
-    background: #62a900;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-width: 155px;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: #62a900;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease;
 }
 
 .page-footer {
@@ -2031,1201 +2003,1180 @@ textarea.form-control {
   text-align: center;
   font-size: 12px;
   padding: 22px 0;
-} 
+}
 
 .register-page {
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding: 12px 10px;
-    align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  align-items: flex-start;
 }
 
 /* Main card */
 .register-card {
-    width: 100%;
-    max-width: 1376px;
-    margin: 8px auto;
-    align-items: stretch;
+  width: 100%;
+  max-width: 1376px;
+  margin: 8px auto;
+  align-items: stretch;
 }
 
 /* Form panel */
 .register-form-panel {
-    min-width: 0;
-    box-sizing: border-box;
-    padding: 18px 26px;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 18px 26px;
 }
 
 /* Logo and heading */
 .register-logo {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .register-logo img {
-    height: 32px;
-    width: auto;
+  height: 32px;
+  width: auto;
 }
 
 .register-heading {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .register-heading h2 {
-    font-size: 17px;
-    margin-bottom: 2px;
+  font-size: 17px;
+  margin-bottom: 2px;
 }
 
 .register-heading p {
-    font-size: 12px;
-    line-height: 1.3;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 /* Section headings */
 .register-form-panel .section-heading {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.25;
-    margin: 6px 0 8px !important;
-    padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 6px 0 8px !important;
+  padding-bottom: 5px;
 }
 
 /* Address and Security section spacing */
 .register-form-panel .section-heading.mt-4 {
-    margin-top: 10px !important;
+  margin-top: 10px !important;
 }
 
 /* Form rows and fields */
 .register-form-panel .row {
-    --bs-gutter-y: 8px;
+  --bs-gutter-y: 8px;
 }
 
 .register-form-panel .row > * {
-    min-width: 0;
+  min-width: 0;
 }
 
 .register-form-panel .form-label {
-    font-size: 11px;
-    margin-bottom: 3px;
-    line-height: 1.3;
+  font-size: 11px;
+  margin-bottom: 3px;
+  line-height: 1.3;
 }
 
 .register-form-panel .form-control {
-    min-height: 30px;
-    height: 30px;
-    padding: 4px 8px;
-    font-size: 12px;
+  min-height: 30px;
+  height: 30px;
+  padding: 4px 8px;
+  font-size: 12px;
 }
 
 /* Address field */
 .register-form-panel textarea.form-control {
-    height: 38px;
-    min-height: 38px;
-    resize: vertical;
+  height: 38px;
+  min-height: 38px;
+  resize: vertical;
 }
 
 /* Hints and validation messages */
 .register-form-panel .password-hint,
 .register-form-panel .field-error {
-    font-size: 10px;
-    line-height: 1.3;
-    margin-top: 3px;
+  font-size: 10px;
+  line-height: 1.3;
+  margin-top: 3px;
 }
 
 /* Create Account button */
 .register-form-panel .d-grid.mt-4 {
-    margin-top: 10px !important;
+  margin-top: 10px !important;
 }
 
 .register-form-panel .btn-register {
-    min-height: 34px;
-    padding: 6px 12px;
-    font-size: 13px;
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 13px;
 }
 
 /* Sign In area */
 .register-form-panel .text-center.mt-4 {
-    margin-top: 8px !important;
+  margin-top: 8px !important;
 }
 
 .register-form-panel .login-link {
-    min-width: 105px;
-    padding: 8px 16px;
-    font-size: 12px;
+  min-width: 105px;
+  padding: 8px 16px;
+  font-size: 12px;
 }
 /* Sign In Button - Hover Color */
 .register-form-panel .login-link:hover {
-    background-color: #4f8f00;
-    color: #ffffff;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+  background-color: #4f8f00;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 
 /* Already have an account? - Link Color */
 .register-form-panel .text-center.mt-4 > a:first-child {
-    color: #62a900;
-    text-decoration: none;
+  color: #62a900;
+  text-decoration: none;
 }
 
 /* Already have an account? - Hover */
 .register-form-panel .text-center.mt-4 > a:first-child:hover {
-    color: #3d7000;
-    text-decoration: underline;
+  color: #3d7000;
+  text-decoration: underline;
 }
 /* Sign In Button - Remove Border and Blue Blur */
 .login-link {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .login-link:hover {
-    background-color: #528f00;
-    color: #ffffff;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
+  background-color: #528f00;
+  color: #ffffff;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .login-link:focus,
 .login-link:active,
 .login-link:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Right-side image */
 .register-image-panel {
-    min-width: 0;
-    position: relative;
-    overflow: hidden;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .register-image-panel > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Reduce phone country code size */
 .iti__selected-dial-code {
-    font-size: 12px !important;
+  font-size: 12px !important;
 }
 
 /* Reduce country flag and dropdown spacing */
 .iti__selected-country {
-    padding: 0 4px !important;
+  padding: 0 4px !important;
 }
 
 /* Phone number input text */
 .iti input[type="tel"] {
-    font-size: 12px !important;
-    padding-left: 5px !important;
+  font-size: 12px !important;
+  padding-left: 5px !important;
 }
 
-                                          /* =========================================
+/* =========================================
                                       ABIMANYA REGISTER - THIYAGUUU -override error side effcts
                                             ========================================= */
 
 /* Register page */
 .register-page {
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding: 10px !important;
-    align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 10px !important;
+  align-items: center;
 }
 
 /* Main card */
 .register-card {
-    max-width: 1320px;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 18px;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
 }
 
 /* Form panel */
 .register-form-panel {
-    padding: 18px 24px !important;
-    box-sizing: border-box;
+  padding: 18px 24px !important;
+  box-sizing: border-box;
 }
 
 /* Logo and heading */
 .register-logo {
-    margin-bottom: 3px !important;
+  margin-bottom: 3px !important;
 }
 
 .register-logo img {
-    max-height: 32px;
+  max-height: 32px;
 }
 
 .register-heading {
-    margin-bottom: 6px !important;
+  margin-bottom: 6px !important;
 }
 
 .register-heading h2 {
-    font-size: 17px !important;
-    margin-bottom: 1px !important;
+  font-size: 17px !important;
+  margin-bottom: 1px !important;
 }
 
 .register-heading p {
-    font-size: 11px !important;
+  font-size: 11px !important;
 }
 
 /* Section headings */
 .register-form-panel .section-heading {
-    font-size: 13px !important;
-    margin-top: 9px !important;
-    margin-bottom: 7px !important;
-    padding-bottom: 5px !important;
+  font-size: 13px !important;
+  margin-top: 9px !important;
+  margin-bottom: 7px !important;
+  padding-bottom: 5px !important;
 }
 
 /* Labels and input fields */
 .register-form-panel .form-label {
-    font-size: 11px !important;
-    margin-bottom: 2px !important;
+  font-size: 11px !important;
+  margin-bottom: 2px !important;
 }
 
 .register-form-panel .form-control {
-    min-height: 30px !important;
-    padding: 4px 8px !important;
-    font-size: 12px !important;
+  min-height: 30px !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
 }
 
 .register-form-panel textarea.form-control {
-    min-height: 38px !important;
-    height: 38px !important;
+  min-height: 38px !important;
+  height: 38px !important;
 }
 
 /* Compact form rows */
 .register-form-panel .mb-3 {
-    margin-bottom: 7px !important;
+  margin-bottom: 7px !important;
 }
 
 .register-form-panel .row {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Validation errors */
 .register-form-panel .field-error {
-    font-size: 9px !important;
-    line-height: 1.2 !important;
-    margin-top: 2px !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
 }
 
 .register-form-panel .password-hint {
-    font-size: 9px !important;
-    line-height: 1.2 !important;
-    margin-top: 3px !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  margin-top: 3px !important;
 }
 
 /* Reduce space before Sign In */
 .register-form-panel #registerForm .text-center.mt-4 {
-    margin-top: 10px !important;
-    padding-bottom: 0 !important;
+  margin-top: 10px !important;
+  padding-bottom: 0 !important;
 }
 
 /* Keep button compact */
 .register-form-panel .login-link {
-    min-height: 34px;
-    padding: 8px 22px !important;
+  min-height: 34px;
+  padding: 8px 22px !important;
 }
 
 /* Fix phone number flag and placeholder overlap */
 
 .register-form-panel .iti {
-    display: block !important;
-    width: 100% !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .register-form-panel .iti input[type="tel"] {
-    width: 100% !important;
-    min-height: 32px !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    padding-right: 8px !important;
-    padding-left: 100px !important;
-    box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 32px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-right: 8px !important;
+  padding-left: 100px !important;
+  box-sizing: border-box !important;
 }
 
 .register-form-panel .iti__flag-container {
-    left: 0 !important;
+  left: 0 !important;
 }
 
 .register-form-panel .iti__selected-country {
-    padding: 0 8px !important;
+  padding: 0 8px !important;
 }
 
 .register-form-panel .iti__selected-dial-code {
-    margin-left: 4px !important;
+  margin-left: 4px !important;
 }
-
 
 /* Desktop: fit the card within the visible screen */
 @media (min-width: 993px) {
-    .register-page {
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-    }
+  .register-page {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
 
-    .register-card {
-        max-height: calc(100vh - 40px);
-    }
+  .register-card {
+    max-height: calc(100vh - 40px);
+  }
 
-    .register-form-panel {
-        overflow-y: auto;
-    }
+  .register-form-panel {
+    overflow-y: auto;
+  }
 
-    .register-image-panel {
-        min-height: 0;
-    }
+  .register-image-panel {
+    min-height: 0;
+  }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-    .register-page {
-        padding: 12px !important;
-        align-items: flex-start;
-    }
+  .register-page {
+    padding: 12px !important;
+    align-items: flex-start;
+  }
 
-    .register-card {
-        max-height: none;
-        flex-direction: column;
-    }
+  .register-card {
+    max-height: none;
+    flex-direction: column;
+  }
 
-    .register-form-panel {
-        width: 100%;
-        overflow: visible;
-        padding: 20px 16px !important;
-    }
+  .register-form-panel {
+    width: 100%;
+    overflow: visible;
+    padding: 20px 16px !important;
+  }
 
-    .register-image-panel {
-        width: 100%;
-        min-height: 260px;
-    }
+  .register-image-panel {
+    width: 100%;
+    min-height: 260px;
+  }
 }
-
-
 
 /* Medium screens */
 @media (min-width: 768px) and (max-width: 1100px) {
-    .register-form-panel {
-        padding: 16px 18px;
-    }
+  .register-form-panel {
+    padding: 16px 18px;
+  }
 
-    .register-form-panel .section-heading {
-        font-size: 12px;
-    }
+  .register-form-panel .section-heading {
+    font-size: 12px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-    .register-page {
-        padding: 12px;
-    }
+  .register-page {
+    padding: 12px;
+  }
 
-    .register-card {
-        flex-direction: column;
-        margin: 0 auto;
-    }
+  .register-card {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 
-    .register-form-panel {
-        width: 100%;
-        padding: 20px 16px;
-    }
+  .register-form-panel {
+    width: 100%;
+    padding: 20px 16px;
+  }
 
-    .register-image-panel {
-        width: 100%;
-        height: 300px;
-        min-height: 300px;
-    }
+  .register-image-panel {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+  }
 }
 
-
-
-
-                                                 /* --------------------------
+/* --------------------------
                                                    THIYAGU -ABIMANYA Profile Card
                                                   ---------------------------- */
 
-
-                                                  
 /* =================================
    ABIMANYA DOORS - USER PROFILE CARD
 ================================= */
 
 .user-profile {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    font-family: inherit;
-    z-index: 1000;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  z-index: 1000;
 }
 
 /* Small profile icon */
 
 .profile-trigger {
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 50%;
-    background:#62a900;
-    color: #ffffff;
-    font-size: 21px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s ease;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #62a900;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .profile-trigger:hover {
-    background: #528f00;
+  background: #528f00;
 }
 
 /* Dropdown card */
 
 .profile-card {
-    position: absolute;
-    top: calc(100% + 12px);
-    right: 0;
-    width: 220px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
-    overflow: hidden;
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
 
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-6px);
-    transition: opacity 0.2s ease,
-                transform 0.2s ease,
-                visibility 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 .profile-card.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* User information */
 
 .profile-card-header {
-    background: #f7f5fa;
-    padding: 24px 15px;
-    text-align: center;
+  background: #f7f5fa;
+  padding: 24px 15px;
+  text-align: center;
 }
 
 .profile-avatar {
-    width: 68px;
-    height: 68px;
-    margin: 0 auto 12px;
-    border-radius: 50%;
-    background: #62a900;
-    color: #ffffff;
-    font-size: 32px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #62a900;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-username {
-    color: #202124;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    overflow-wrap: anywhere;
+  color: #202124;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
 }
 
 .profile-email {
-    color: #5f6368;
-    font-size: 13px;
-    overflow-wrap: anywhere;
+  color: #5f6368;
+  font-size: 13px;
+  overflow-wrap: anywhere;
 }
 
 /* Sign out */
 
 .profile-signout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    padding: 17px 22px;
-    color: #333333;
-    background: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 22px;
+  color: #333333;
+  background: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .profile-signout i {
-    font-size: 18px;
-    color: #6b7280;
+  font-size: 18px;
+  color: #6b7280;
 }
 
 .profile-signout:hover {
-    background: #f1f3f4;
-    color: #202124;
-    text-decoration: none;
+  background: #f1f3f4;
+  color: #202124;
+  text-decoration: none;
 }
 
 @media (max-width: 400px) {
-    .profile-card {
-        width: min(300px, calc(100vw - 24px));
-        right: -5px;
-    }
+  .profile-card {
+    width: min(300px, calc(100vw - 24px));
+    right: -5px;
+  }
 }
 
-
-
-
-                                              /* =================================
+/* =================================
                                                    ABHIMANYA DOORS - ENQUIRY PAGE
                                                  ================================= */
 
 .enquiry-page {
-    min-height: 100vh;
-    padding: 35px 25px;
-    background-color: #f5f4f2;
-    box-sizing: border-box;
+  min-height: 100vh;
+  padding: 35px 25px;
+  background-color: #f5f4f2;
+  box-sizing: border-box;
 }
 
 .enquiry-container {
-    width: 100%;
-    max-width: 1450px;
-    min-height: 670px;
-    margin: 0 auto;
-    padding: 30px 35px 40px;
-    background-color: #ffffff;
-    border: 1px solid #d0ceca;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1450px;
+  min-height: 670px;
+  margin: 0 auto;
+  padding: 30px 35px 40px;
+  background-color: #ffffff;
+  border: 1px solid #d0ceca;
+  box-sizing: border-box;
 }
 
 /* Logo */
 
 .enquiry-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 75px;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  margin-bottom: 15px;
 }
 
 .enquiry-logo img {
-    display: block;
-    max-width: 220px;
-    max-height: 85px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+  display: block;
+  max-width: 220px;
+  max-height: 85px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Toolbar */
 
 .enquiry-toolbar {
-    display: grid;
-    grid-template-columns: 220px minmax(180px, 1fr) 270px;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 220px minmax(180px, 1fr) 270px;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 12px;
 }
 
 .enquiry-toolbar h2 {
-    margin-left: 40px;
-    color: #62a900;
-    font-size: 28px;
-    font-weight: 800;
+  margin-left: 40px;
+  color: #62a900;
+  font-size: 28px;
+  font-weight: 800;
 }
 
 /* Search */
 
 .enquiry-search {
-    width: 100%;
+  width: 100%;
 }
 
 .enquiry-search input {
-    display: block;
-    width: 100%;
-    height: 48px;
-    padding: 8px 15px;
-    border: 3px solid #62a900;
-    border-radius: 4px;
-    outline: none;
-    background-color: #ffffff;
-    color: #333333;
-    font-size: 22px;
-    text-align: center;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 8px 15px;
+  border: 3px solid #62a900;
+  border-radius: 4px;
+  outline: none;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 22px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .enquiry-search input::placeholder {
-    color: #a5a5a5;
-    opacity: 1;
+  color: #a5a5a5;
+  opacity: 1;
 }
 
 .enquiry-search input:focus {
-    border-color: #62a900;
-    box-shadow: none;
+  border-color: #62a900;
+  box-shadow: none;
 }
 
 /* Add Enquiry Button */
 
 .enquiry-add-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 8px 15px;
-    border: 3px solid #62a900;
-    border-radius: 2px;
-    background-color: #62a900;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 900;
-    text-align: center;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 15px;
+  border: 3px solid #62a900;
+  border-radius: 2px;
+  background-color: #62a900;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
 }
 
 .enquiry-add-button:hover {
-    background-color: #528f00;
-    border-color: #528f00;
-    color: #ffffff;
+  background-color: #528f00;
+  border-color: #528f00;
+  color: #ffffff;
 }
 
 /* Table Wrapper */
 
 .enquiry-table-wrapper {
-    width: 100%;
-    overflow-x: auto;
+  width: 100%;
+  overflow-x: auto;
 }
 
 /* Table */
 
 .enquiry-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    color: #111111;
-    font-family: inherit;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #111111;
+  font-family: inherit;
 }
 
 .enquiry-table th,
 .enquiry-table td {
-    /* padding: 9px 50px; */
-    border: 2px solid #ffffff;
-    text-align: center;
-    vertical-align: middle;
-    overflow-wrap: anywhere;
+  /* padding: 9px 50px; */
+  border: 2px solid #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
 }
 
 /* Table Heading */
 
 .enquiry-table thead th {
-    background-color: #62a900;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.4;
+  background-color: #62a900;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 /* Table Body */
 
 .enquiry-table tbody tr:nth-child(odd) {
-    background-color: #dfe8d3;
+  background-color: #dfe8d3;
 }
 
 .enquiry-table tbody tr:nth-child(even) {
-    background-color: #edf2e8;
+  background-color: #edf2e8;
 }
 
 .enquiry-table td {
-    font-size: 17px;
-    line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 /* Display-only Fields */
 
 .enquiry-label {
-    display: block;
-    font-weight: 400;
+  display: block;
+  font-weight: 400;
 }
 
 .enquiry-description {
-    font-size: 15px;
-    line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 /* Quantity - Editable Input */
 
 .enquiry-quantity {
-    display: block;
-    width: 100%;
-    max-width: 90px;
-    min-width: 55px;
-    height: 40px;
-    padding: 5px 8px;
-    border: 1px solid #c7d7b8;
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: #111111;
-    font-size: 18px;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 90px;
+  min-width: 55px;
+  height: 40px;
+  padding: 5px 8px;
+  border: 1px solid #c7d7b8;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
 .enquiry-quantity:focus {
-    border-color: #62a900;
-    outline: 2px solid rgba(98, 169, 0, 0.15);
+  border-color: #62a900;
+  outline: 2px solid rgba(98, 169, 0, 0.15);
 }
 
 /* Place Order Button */
 
 .enquiry-order-button {
-    display: inline-block;
-    padding: 0 7px;
-    border: 2px solid #62a900;
-    border-radius: 2px;
-    background-color: transparent;
-    color: #62a900;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 1.4;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  padding: 0 7px;
+  border: 2px solid #62a900;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #62a900;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .enquiry-order-button:hover {
-    background-color: #62a900;
-    color: #ffffff;
+  background-color: #62a900;
+  color: #ffffff;
 }
 
 /* Empty State */
 
 .enquiry-table .enquiry-empty {
-    padding: 25px 12px;
-    background-color: #edf2e8;
-    color: #777777;
-    text-align: center;
-    font-size: 16px;
+  padding: 25px 12px;
+  background-color: #edf2e8;
+  color: #777777;
+  text-align: center;
+  font-size: 16px;
 }
 
 /* Responsive */
 
 @media (max-width: 1100px) {
-    .enquiry-container {
-        padding: 25px 20px;
-    }
+  .enquiry-container {
+    padding: 25px 20px;
+  }
 
-    .enquiry-toolbar {
-        grid-template-columns: 180px minmax(150px, 1fr) 200px;
-        gap: 15px;
-    }
+  .enquiry-toolbar {
+    grid-template-columns: 180px minmax(150px, 1fr) 200px;
+    gap: 15px;
+  }
 
-    .enquiry-toolbar h2 {
-        font-size: 23px;
-    }
+  .enquiry-toolbar h2 {
+    font-size: 23px;
+  }
 
-    .enquiry-add-button {
-        font-size: 21px;
-    }
+  .enquiry-add-button {
+    font-size: 21px;
+  }
 
-    .enquiry-table th,
-    .enquiry-table td {
-        padding: 8px;
-    }
+  .enquiry-table th,
+  .enquiry-table td {
+    padding: 8px;
+  }
 }
 
 @media (max-width: 767px) {
-    .enquiry-page {
-        padding: 15px 8px;
-    }
+  .enquiry-page {
+    padding: 15px 8px;
+  }
 
-    .enquiry-container {
-        padding: 20px 12px;
-    }
+  .enquiry-container {
+    padding: 20px 12px;
+  }
 
-    .enquiry-logo {
-        margin-bottom: 20px;
-    }
+  .enquiry-logo {
+    margin-bottom: 20px;
+  }
 
-    .enquiry-toolbar {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+  .enquiry-toolbar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-    .enquiry-toolbar h2 {
-        font-size: 23px;
-    }
+  .enquiry-toolbar h2 {
+    font-size: 23px;
+  }
 
-    .enquiry-search input {
-        height: 45px;
-        font-size: 18px;
-    }
+  .enquiry-search input {
+    height: 45px;
+    font-size: 18px;
+  }
 
-    .enquiry-add-button {
-        min-height: 45px;
-        font-size: 19px;
-    }
+  .enquiry-add-button {
+    min-height: 45px;
+    font-size: 19px;
+  }
 
-    .enquiry-table {
-        min-width: 850px;
-    }
+  .enquiry-table {
+    min-width: 850px;
+  }
 
-    .enquiry-table th,
-    .enquiry-table td {
-        padding: 8px;
-    }
-}  
-                                         /* ==============================================
+  .enquiry-table th,
+  .enquiry-table td {
+    padding: 8px;
+  }
+}
+/* ==============================================
                                                     THIYAGU -   VIEW MORE BUTTON 
                                           =================================================  */
-                                          
 
+.enquiry-modal-image {
+  width: 60px;
+  height: 55;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .enquiry-description-cell {
-    vertical-align: middle !important;
+  vertical-align: middle !important;
 }
 
 .enquiry-description-cell .enquiry-description {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .enquiry-view-more {
-    display: inline-block;
-    padding: 3px 9px;
-    border: 1px solid #62a900;
-    border-radius: 4px;
-    background: transparent;
-    color: #528f00;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  display: inline-block;
+  padding: 3px 9px;
+  border: 1px solid #62a900;
+  border-radius: 4px;
+  background: transparent;
+  color: #528f00;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .enquiry-view-more:hover {
-    background-color: #62a900;
-    color: #ffffff;
+  background-color: #62a900;
+  color: #ffffff;
 }
-
 
 /* =========================================
    MODAL BACKGROUND
 ========================================= */
 
 .enquiry-modal[hidden] {
-    display: none !important;
+  display: none !important;
 }
 
 .enquiry-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 100000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .enquiry-modal-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(31, 40, 27, 0.58);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 40, 27, 0.58);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 body.enquiry-modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
-
 
 /* =========================================
    MODAL CARD
 ========================================= */
 
 .enquiry-modal-card {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 620px;
-    max-height: 88vh;
-    overflow-y: auto;
-    background: #ffffff;
-    border-radius: 17px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
-    animation: enquiryModalOpen 0.22s ease;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 17px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  animation: enquiryModalOpen 0.22s ease;
 }
 
 @keyframes enquiryModalOpen {
-    from {
-        opacity: 0;
-        transform: translateY(12px) scale(0.98);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
-
 
 /* =========================================
    MODAL HEADER
 ========================================= */
 
 .enquiry-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 25px 27px 19px;
-    border-bottom: 1px solid #eeeeea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px 27px 19px;
+  border-bottom: 1px solid #eeeeea;
 }
 
 .enquiry-modal-product {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
 }
 
 /* Blank image placeholder for dynamic image integration */
 
 .enquiry-modal-image {
-    flex-shrink: 0;
-    width: 72px;
-    height: 72px;
-    border-radius: 15px;
-    background: #f0f4e9;
-    border: 1px solid #e9eee1;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 15px;
+  background: #f0f4e9;
+  border: 1px solid #e9eee1;
 }
 
 .enquiry-modal-heading {
-    min-width: 0;
+  min-width: 0;
 }
 
 .enquiry-modal-heading h3 {
-    margin: 0 0 5px;
-    color: #263323;
-    font-size: 19px;
-    font-weight: 700;
+  margin: 0 0 5px;
+  color: #263323;
+  font-size: 19px;
+  font-weight: 700;
 }
 
 .enquiry-modal-heading p {
-    margin: 0;
-    color: #73796d;
-    font-size: 14px;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
+  margin: 0;
+  color: #73796d;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .enquiry-modal-close {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: 1px solid #d9ded1;
-    border-radius: 13px;
-    background: #ffffff;
-    color: #333333;
-    font-size: 27px;
-    line-height: 1;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d9ded1;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .enquiry-modal-close:hover {
-    border-color: #62a900;
-    background: #f0f6e9;
-    color: #528f00;
+  border-color: #62a900;
+  background: #f0f6e9;
+  color: #528f00;
 }
-
 
 /* =========================================
    CUSTOMIZATION DETAILS
 ========================================= */
 
 .enquiry-modal-details {
-    width: 100%;
+  width: 100%;
 }
 
 .enquiry-modal-detail-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    min-height: 49px;
-    padding: 11px 27px;
-    border-bottom: 1px solid #eeeeea;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 49px;
+  padding: 11px 27px;
+  border-bottom: 1px solid #eeeeea;
+  box-sizing: border-box;
 }
 
 .enquiry-modal-detail-label {
-    flex: 1;
-    color: #697064;
-    font-size: 15px;
-    font-weight: 400;
-    overflow-wrap: anywhere;
+  flex: 1;
+  color: #697064;
+  font-size: 15px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
 }
 
 .enquiry-modal-detail-value {
-    flex: 1;
-    color: #586153;
-    font-size: 15px;
-    font-weight: 650;
-    text-align: right;
-    overflow-wrap: anywhere;
+  flex: 1;
+  color: #586153;
+  font-size: 15px;
+  font-weight: 650;
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .enquiry-modal-empty {
-    padding: 25px;
-    color: #777777;
-    text-align: center;
-    font-size: 14px;
+  padding: 25px;
+  color: #777777;
+  text-align: center;
+  font-size: 14px;
 }
-
 
 /* =========================================
    MODAL FOOTER
 ========================================= */
 
 .enquiry-modal-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 13px;
-    padding: 19px 27px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13px;
+  padding: 19px 27px 21px;
 }
 
 .enquiry-close-button {
-    width: auto;
-    height: auto;
-    min-height: 49px;
-    padding: 10px 23px;
-    border: 1px solid #62a900;
-    border-radius: 11px;
-    color: #528f00;
-    font-size: 14px;
-    font-weight: 600;
+  width: auto;
+  height: auto;
+  min-height: 49px;
+  padding: 10px 23px;
+  border: 1px solid #62a900;
+  border-radius: 11px;
+  color: #528f00;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .enquiry-close-button:hover {
-    background: #f0f6e9;
+  background: #f0f6e9;
 }
 
 .enquiry-edit-button {
-    min-height: 49px;
-    padding: 10px 23px;
-    border: 1px solid #62a900;
-    border-radius: 11px;
-    background: #62a900;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s ease;
+  min-height: 49px;
+  padding: 10px 23px;
+  border: 1px solid #62a900;
+  border-radius: 11px;
+  background: #62a900;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .enquiry-edit-button:hover {
-    background: #528f00;
+  background: #528f00;
 }
-
 
 /* =========================================
    RESPONSIVE MODAL
 ========================================= */
 
 @media (max-width: 600px) {
+  .enquiry-modal {
+    padding: 12px;
+  }
 
-    .enquiry-modal {
-        padding: 12px;
-    }
+  .enquiry-modal-card {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 13px;
+  }
 
-    .enquiry-modal-card {
-        max-width: 100%;
-        max-height: 90vh;
-        border-radius: 13px;
-    }
+  .enquiry-modal-header {
+    padding: 18px 15px;
+    gap: 10px;
+  }
 
-    .enquiry-modal-header {
-        padding: 18px 15px;
-        gap: 10px;
-    }
+  .enquiry-modal-image {
+    width: 58px;
+    height: 58px;
+  }
 
-    .enquiry-modal-image {
-        width: 58px;
-        height: 58px;
-    }
+  .enquiry-modal-heading h3 {
+    font-size: 16px;
+  }
 
-    .enquiry-modal-heading h3 {
-        font-size: 16px;
-    }
+  .enquiry-modal-heading p {
+    font-size: 12px;
+  }
 
-    .enquiry-modal-heading p {
-        font-size: 12px;
-    }
+  .enquiry-modal-header > .enquiry-modal-close {
+    width: 39px;
+    height: 39px;
+    font-size: 23px;
+  }
 
-    .enquiry-modal-header > .enquiry-modal-close {
-        width: 39px;
-        height: 39px;
-        font-size: 23px;
-    }
+  .enquiry-modal-detail-row {
+    padding: 12px 16px;
+    gap: 12px;
+  }
 
-    .enquiry-modal-detail-row {
-        padding: 12px 16px;
-        gap: 12px;
-    }
+  .enquiry-modal-detail-label,
+  .enquiry-modal-detail-value {
+    font-size: 13px;
+  }
 
-    .enquiry-modal-detail-label,
-    .enquiry-modal-detail-value {
-        font-size: 13px;
-    }
+  .enquiry-modal-footer {
+    padding: 15px;
+    gap: 8px;
+  }
 
-    .enquiry-modal-footer {
-        padding: 15px;
-        gap: 8px;
-    }
-
-    .enquiry-close-button,
-    .enquiry-edit-button {
-        min-height: 43px;
-        padding: 9px 13px;
-        font-size: 12px;
-    }
-
+  .enquiry-close-button,
+  .enquiry-edit-button {
+    min-height: 43px;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
 }
 
-
-
-                                        /* =========================================================
+/* =========================================================
                                             ABIMANYA DOORS - COMPLETE GREEN THEME OVERRIDE
                                                      Primary Green: #62a900 -THIYAGUU
                                         ========================================================= */
 
-
-
 /* Dropdown Focus Border and Shadow */
 .form-select:focus {
-    border-color: #62a900 !important;
-    box-shadow: 0 0 0 0.25rem rgba(98, 169, 0, 0.20) !important;
-    outline: none !important;
+  border-color: #62a900 !important;
+  box-shadow: 0 0 0 0.25rem rgba(98, 169, 0, 0.2) !important;
+  outline: none !important;
 }
 
 /* Dropdown Selected Option */
 .form-select option:checked {
-    background-color: #62a900 !important;
-    color: #ffffff !important;
+  background-color: #62a900 !important;
+  color: #ffffff !important;
 }
-
-
 
 :root {
   --ab-green: #62a900;
@@ -3233,7 +3184,7 @@ body.enquiry-modal-open {
   --ab-green-light: #eaf5dc;
   --ab-green-soft: #f4f9ed;
   --ab-green-border: #b7d995;
-  --ab-green-shadow: rgba(98, 169, 0, 0.20);
+  --ab-green-shadow: rgba(98, 169, 0, 0.2);
 }
 
 /* ---------- GLOBAL THEME ---------- */
@@ -3247,7 +3198,6 @@ body {
   background: var(--ab-green);
   color: #ffffff;
 }
-
 
 /* ---------- ACCORDION HEADER - SIMPLE STYLE ---------- */
 
@@ -3278,7 +3228,6 @@ body {
 .accordion-button:not(.collapsed)::after {
   filter: none !important;
 }
-
 
 /* ---------- INPUTS AND SELECTS ---------- */
 
@@ -3334,8 +3283,8 @@ select option:hover {
   color: var(--ab-green-dark) !important;
 }
 select option:hover {
-    background-color: #62a900 !important;
-    color: #ffffff !important;
+  background-color: #62a900 !important;
+  color: #ffffff !important;
 }
 
 /* ---------- LABELS ---------- */
@@ -3540,112 +3489,106 @@ a:focus {
 #specPanel select,
 #specPanel input,
 #specPanel textarea {
-    color: #333333 !important;
+  color: #333333 !important;
 }
 
 /* Dropdown options */
 #specPanel .form-select option,
 #specPanel select option {
-    color: #333333 !important;
-    background-color: #ffffff !important;
+  color: #333333 !important;
+  background-color: #ffffff !important;
 }
 
 /* Labels: Frame, Designs, Height, Width, etc. */
 #specPanel label,
 #specPanel .form-label {
-    color: #333333 !important;
+  color: #333333 !important;
 }
 
 /* Text inside dropdown and customization fields */
 #specPanel .accordion-body {
-    color: #333333 !important;
+  color: #333333 !important;
 }
 
-
-
-
-
-
-                                         /* ==========================================
+/* ==========================================
                                               ABIMANYA QUOTATION - BRAND GREEN THEME
                                             ========================================== */
 
 #quotation-container {
-    --quote-green: #7acb08;
-    --quote-green-dark: #4d8500;
-    --quote-green-light: #eaf5dc;
+  --quote-green: #7acb08;
+  --quote-green-dark: #4d8500;
+  --quote-green-light: #eaf5dc;
 }
 
 /* All quotation section headings */
 #quotation-container .section-title {
-    background: #7acb08 !important;
-    background-color: #7acb08 !important;
-    color: #ffffff !important;
-    border-color: #7acb08 !important;
+  background: #7acb08 !important;
+  background-color: #7acb08 !important;
+  color: #ffffff !important;
+  border-color: #7acb08 !important;
 }
 
 /* Estimate number badge */
 #quotation-container .est-badge {
-    background: #7acb08 !important;
-    background-color: #7acb08 !important;
-    color: #ffffff !important;
-    border-color: #7acb08 !important;
+  background: #7acb08 !important;
+  background-color: #7acb08 !important;
+  color: #ffffff !important;
+  border-color: #7acb08 !important;
 }
 
 /* Download button */
 #quotation-container .quotation-download-btn {
-    background: #7acb08 !important;
-    background-color: #7acb08 !important;
-    border-color: #7acb08 !important;
-    color: #ffffff !important;
+  background: #7acb08 !important;
+  background-color: #7acb08 !important;
+  border-color: #7acb08 !important;
+  color: #ffffff !important;
 }
 
 /* Place order button */
 #quotation-container .placeorder-btn {
-    background: #7acb08 !important;
-    background-color: #7acb08 !important;
-    border-color: #7acb08 !important;
-    color: #ffffff !important;
+  background: #7acb08 !important;
+  background-color: #7acb08 !important;
+  border-color: #7acb08 !important;
+  color: #ffffff !important;
 }
 
 /* Hover effects */
 #quotation-container .quotation-download-btn:hover,
 #quotation-container .placeorder-btn:hover {
-    background: #4d8500 !important;
-    border-color: #4d8500 !important;
-    color: #ffffff !important;
+  background: #4d8500 !important;
+  border-color: #4d8500 !important;
+  color: #ffffff !important;
 }
 
 /* Grand total row */
 #quotation-container .total-row,
 #quotation-container .total-row td {
-    background: #7acb08 !important;
-    color: #ffffff !important;
-    border-color: #7acb08 !important;
+  background: #7acb08 !important;
+  color: #ffffff !important;
+  border-color: #7acb08 !important;
 }
 
 /* Subtotal row */
 #quotation-container .subtotal-row {
-    background: #eaf5dc !important;
+  background: #eaf5dc !important;
 }
 
 /* Existing dark teal amount text */
 #quotation-container .subtotal-row td,
 #quotation-container .items-table td,
 #quotation-container .commercial-table td {
-    border-color: #e1e8d9;
+  border-color: #e1e8d9;
 }
 
 /* Green top border */
 #quotation-container .quotation-header {
-    border-bottom-color: #7acb08 !important;
+  border-bottom-color: #7acb08 !important;
 }
 
 /* Green terms icons */
 #quotation-container .terms-icon {
-    color: #7acb08 !important;
+  color: #7acb08 !important;
 }
-
 
 .cart-product-image {
   width: 90px;
