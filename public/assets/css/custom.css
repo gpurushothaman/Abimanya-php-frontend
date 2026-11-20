@@ -2841,12 +2841,13 @@ textarea.form-control {
                                                     THIYAGU -   VIEW MORE BUTTON 
                                           =================================================  */
 
-.enquiry-modal-image {
-  width: 60px;
-  height: 55;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  .enquiry-modalimage {
+    width: 60px;
+    height: 55px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25%;
 }
 
 .enquiry-description-cell {

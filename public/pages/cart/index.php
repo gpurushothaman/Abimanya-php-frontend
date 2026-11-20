@@ -216,7 +216,7 @@ $_SESSION['user']['cartCount'] = (string)((int)($cartData['count'] ?? 0));
             <div class="enquiry-modal-product">
 
                 <!-- Image placeholder: Senior developer can connect dynamic image here -->
-                <div class="enquiry-modal-image">
+                <div class="enquiry-modalimage">
                 </div>
 
                 <div class="enquiry-modal-heading">
@@ -461,9 +461,7 @@ $_SESSION['user']['cartCount'] = (string)((int)($cartData['count'] ?? 0));
 
             } else {
 
-
-
-                document.querySelector(".enquiry-modal-image").style.backgroundImage =
+                document.querySelector(".enquiry-modalimage").style.backgroundImage =
                     `url('${doorImage}')`;
 
                 detailItems.forEach(item => {
@@ -538,11 +536,11 @@ $_SESSION['user']['cartCount'] = (string)((int)($cartData['count'] ?? 0));
 
 
     // Edit button is a UI placeholder until the edit route/API is connected.
-    document.getElementById('enquiryEditButton').addEventListener('click', function() {
+    // document.getElementById('enquiryEditButton').addEventListener('click', function() {
 
-        console.log('Connect Edit Customization to the existing customization page/API.');
+    //     console.log('Connect Edit Customization to the existing customization page/API.');
 
-    });
+    // });
 
 
     // ==================================
