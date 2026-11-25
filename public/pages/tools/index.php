@@ -40,7 +40,7 @@
   <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem"></div>
   <!-- <div class="progress w-50">
     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="progress-bar" style="width: 0%"></div> -->
-  </div>
+</div>
 </div>
 
 <div class="floating-ui">
@@ -363,6 +363,22 @@
 
           <div id="collapse3" class="accordion-collapse collapse">
             <div class="accordion-body scroll-body">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jambSizeCollapse">
+                    Size
+                  </button>
+                </h2>
+
+                <div id="jambSizeCollapse" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label id="jambSizelbl"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jambLocationCollapse">
@@ -724,12 +740,12 @@
 </div>
 
 <script>
-    window.APP_CONFIG = <?= json_encode([
-                            'addToCartUrl' => rtrim(getenv('APP_API_URL'), '/') . '/cart',
-                            'cartUrl' => htmlspecialchars(url('cart')),
-                            'customerCode' => $_SESSION['user']['customerCode'] ?? null,
-                            'api_token' => $_SESSION['api_token'] ?? null,
-                        ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
+  window.APP_CONFIG = <?= json_encode([
+                        'addToCartUrl' => rtrim(getenv('APP_API_URL'), '/') . '/cart',
+                        'cartUrl' => htmlspecialchars(url('cart')),
+                        'customerCode' => $_SESSION['user']['customerCode'] ?? null,
+                        'api_token' => $_SESSION['api_token'] ?? null,
+                      ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
 </script>
 
 <script type="module" src="<?= main('build.js') ?>"></script>
